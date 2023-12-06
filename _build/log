@@ -3,7 +3,7 @@
 # Shared cache: disabled
 # Workspace root: /Users/jordanibe/cs3110/PortfolioManager
 # Auto-detected concurrency: 8
-$ /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlc.opt -config > /var/folders/xs/dz2sddqj22z204t_f4hx700r0000gn/T/dune_f42c47_output
+$ /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlc.opt -config > /var/folders/xs/dz2sddqj22z204t_f4hx700r0000gn/T/dune_11f87d_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -116,6 +116,38 @@ $ /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlc.opt -config > /var/folders/xs/
 #      ; windows_unicode = false
 #      }
 #  }
-$ (cd _build/default && /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I bin/.main.eobjs/byte -I /Users/jordanibe/.opam/cs3110-2023fa/lib/bytes -I /Users/jordanibe/.opam/cs3110-2023fa/lib/csv -I lib/.PortfolioManager.objs/byte -no-alias-deps -opaque -o bin/.main.eobjs/byte/dune__exe__Main.cmi -c -intf bin/main.mli)
-$ (cd _build/default && /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I /Users/jordanibe/.opam/cs3110-2023fa/lib/bytes -I /Users/jordanibe/.opam/cs3110-2023fa/lib/csv -I lib/.PortfolioManager.objs/byte -I lib/.PortfolioManager.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
-$ (cd _build/default && /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe lib/PortfolioManager.cmxa /Users/jordanibe/.opam/cs3110-2023fa/lib/csv/csv.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
+$ (cd _build/default && /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamldep.opt -modules -impl src/module1.ml) > _build/default/src/.module1.eobjs/dune__exe__Module1.impl.d
+$ (cd _build/default && /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -bin-annot -I src/.module1.eobjs/byte -no-alias-deps -opaque -o src/.module1.eobjs/byte/dune__exe.cmo -c -impl src/.module1.eobjs/dune__exe.ml-gen)
+$ (cd _build/default && /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamldep.opt -modules -intf src/module1.mli) > _build/default/src/.module1.eobjs/dune__exe__Module1.intf.d
+$ (cd _build/default && /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.module1.eobjs/byte -I /Users/jordanibe/.opam/cs3110-2023fa/lib/bytes -I /Users/jordanibe/.opam/cs3110-2023fa/lib/csv -I lib/.PortfolioManager.objs/byte -no-alias-deps -opaque -open Dune__exe -o src/.module1.eobjs/byte/dune__exe__Module1.cmi -c -intf src/module1.mli)
+$ (cd _build/default && /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -I src/.module1.eobjs/byte -I src/.module1.eobjs/native -intf-suffix .ml-gen -no-alias-deps -opaque -o src/.module1.eobjs/native/dune__exe.cmx -c -impl src/.module1.eobjs/dune__exe.ml-gen)
+$ (cd _build/default && /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.module1.eobjs/byte -I src/.module1.eobjs/native -I /Users/jordanibe/.opam/cs3110-2023fa/lib/bytes -I /Users/jordanibe/.opam/cs3110-2023fa/lib/csv -I lib/.PortfolioManager.objs/byte -I lib/.PortfolioManager.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o src/.module1.eobjs/native/dune__exe__Module1.cmx -c -impl src/module1.ml)
+> File "src/module1.ml", line 1, characters 0-8:
+> 1 | open Csv
+>     ^^^^^^^^
+> Error (warning 33 [unused-open]): unused open Csv.
+> File "src/module1.ml", line 2, characters 0-11:
+> 2 | open Printf
+>     ^^^^^^^^^^^
+> Error (warning 33 [unused-open]): unused open Stdlib.Printf.
+> File "src/module1.ml", line 9, characters 6-25:
+> 9 |       open_price : float;
+>           ^^^^^^^^^^^^^^^^^^^
+> Error (warning 69 [unused-field]): unused record field open_price.
+> File "src/module1.ml", line 10, characters 6-26:
+> 10 |       close_price : float;
+>            ^^^^^^^^^^^^^^^^^^^^
+> Error (warning 69 [unused-field]): unused record field close_price.
+> File "src/module1.ml", line 11, characters 6-25:
+> 11 |       high_price : float;
+>            ^^^^^^^^^^^^^^^^^^^
+> Error (warning 69 [unused-field]): unused record field high_price.
+> File "src/module1.ml", line 12, characters 6-24:
+> 12 |       low_price : float;
+>            ^^^^^^^^^^^^^^^^^^
+> Error (warning 69 [unused-field]): unused record field low_price.
+> File "src/module1.ml", line 14, characters 0-37:
+> 14 | type stock = (int * candlestick) list
+>      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> Error (warning 34 [unused-type-declaration]): unused type stock.
+[2]
