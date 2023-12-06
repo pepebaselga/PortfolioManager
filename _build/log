@@ -1,9 +1,9 @@
 # dune build
 # OCAMLPARAM: unset
 # Shared cache: disabled
-# Workspace root: /Users/pepebaselga/cs3110/PortfolioManager
+# Workspace root: /Users/jordanibe/cs3110/PortfolioManager
 # Auto-detected concurrency: 8
-$ /Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlc.opt -config > /var/folders/d1/7ctmxfds3slf8bgcsq25q0bh0000gn/T/dune_988f64_output
+$ /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlc.opt -config > /var/folders/xs/dz2sddqj22z204t_f4hx700r0000gn/T/dune_f42c47_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -12,44 +12,44 @@ $ /Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlc.opt -config > /var/folders/d
 #  ; for_host = None
 #  ; fdo_target_exe = None
 #  ; build_dir = In_build_dir "default"
-#  ; ocaml_bin = External "/Users/pepebaselga/.opam/cs3110-2023fa/bin"
-#  ; ocaml = Ok External "/Users/pepebaselga/.opam/cs3110-2023fa/bin/ocaml"
-#  ; ocamlc = External "/Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlc.opt"
+#  ; ocaml_bin = External "/Users/jordanibe/.opam/cs3110-2023fa/bin"
+#  ; ocaml = Ok External "/Users/jordanibe/.opam/cs3110-2023fa/bin/ocaml"
+#  ; ocamlc = External "/Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlc.opt"
 #  ; ocamlopt =
-#      Ok External "/Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlopt.opt"
+#      Ok External "/Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlopt.opt"
 #  ; ocamldep =
-#      Ok External "/Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamldep.opt"
+#      Ok External "/Users/jordanibe/.opam/cs3110-2023fa/bin/ocamldep.opt"
 #  ; ocamlmklib =
-#      Ok External "/Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlmklib.opt"
+#      Ok External "/Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlmklib.opt"
 #  ; env =
 #      map
 #        { "DUNE_OCAML_HARDCODED" :
-#            "/Users/pepebaselga/.opam/cs3110-2023fa/lib/ocaml:/Users/pepebaselga/.opam/cs3110-2023fa/lib"
+#            "/Users/jordanibe/.opam/cs3110-2023fa/lib/ocaml:/Users/jordanibe/.opam/cs3110-2023fa/lib"
 #        ; "DUNE_OCAML_STDLIB" :
-#            "/Users/pepebaselga/.opam/cs3110-2023fa/lib/ocaml"
-#        ; "DUNE_SOURCEROOT" : "/Users/pepebaselga/cs3110/PortfolioManager"
+#            "/Users/jordanibe/.opam/cs3110-2023fa/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/jordanibe/cs3110/PortfolioManager"
 #        ; "INSIDE_DUNE" :
-#            "/Users/pepebaselga/cs3110/PortfolioManager/_build/default"
+#            "/Users/jordanibe/cs3110/PortfolioManager/_build/default"
 #        ; "OCAMLFIND_IGNORE_DUPS_IN" :
-#            "/Users/pepebaselga/cs3110/PortfolioManager/_build/install/default/lib"
+#            "/Users/jordanibe/cs3110/PortfolioManager/_build/install/default/lib"
 #        ; "OCAMLPATH" :
-#            "/Users/pepebaselga/cs3110/PortfolioManager/_build/install/default/lib"
+#            "/Users/jordanibe/cs3110/PortfolioManager/_build/install/default/lib"
 #        ; "OCAMLTOP_INCLUDE_PATH" :
-#            "/Users/pepebaselga/cs3110/PortfolioManager/_build/install/default/lib/toplevel"
+#            "/Users/jordanibe/cs3110/PortfolioManager/_build/install/default/lib/toplevel"
 #        ; "OCAML_COLOR" : "always"
 #        ; "OPAMCOLOR" : "always"
 #        }
 #  ; findlib_paths =
-#      [ External "/Users/pepebaselga/.opam/cs3110-2023fa/lib/ocaml"
-#      ; External "/Users/pepebaselga/.opam/cs3110-2023fa/lib"
+#      [ External "/Users/jordanibe/.opam/cs3110-2023fa/lib/ocaml"
+#      ; External "/Users/jordanibe/.opam/cs3110-2023fa/lib"
 #      ]
 #  ; natdynlink_supported = true
 #  ; supports_shared_libraries = true
 #  ; ocaml_config =
 #      { version = "5.0.0"
 #      ; standard_library_default =
-#          "/Users/pepebaselga/.opam/cs3110-2023fa/lib/ocaml"
-#      ; standard_library = "/Users/pepebaselga/.opam/cs3110-2023fa/lib/ocaml"
+#          "/Users/jordanibe/.opam/cs3110-2023fa/lib/ocaml"
+#      ; standard_library = "/Users/jordanibe/.opam/cs3110-2023fa/lib/ocaml"
 #      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
 #      ; ccomp_type = "cc"
 #      ; c_compiler = "cc"
@@ -95,8 +95,8 @@ $ /Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlc.opt -config > /var/folders/d
 #      ; os_type = "Unix"
 #      ; default_executable_name = "a.out"
 #      ; systhread_supported = true
-#      ; host = "aarch64-apple-darwin21.3.0"
-#      ; target = "aarch64-apple-darwin21.3.0"
+#      ; host = "aarch64-apple-darwin22.6.0"
+#      ; target = "aarch64-apple-darwin22.6.0"
 #      ; profiling = false
 #      ; flambda = false
 #      ; spacetime = false
@@ -116,15 +116,6 @@ $ /Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlc.opt -config > /var/folders/d
 #      ; windows_unicode = false
 #      }
 #  }
-# Promoting "_build/default/PortfolioManager.opam" to "PortfolioManager.opam"
-$ (cd _build/default && /Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -bin-annot -I lib/.PortfolioManager.objs/byte -no-alias-deps -opaque -o lib/.PortfolioManager.objs/byte/portfolioManager.cmo -c -impl lib/portfolioManager.ml-gen)
-$ (cd _build/default && /Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I test/.PortfolioManager.eobjs/byte -no-alias-deps -opaque -o test/.PortfolioManager.eobjs/byte/dune__exe__PortfolioManager.cmi -c -intf test/PortfolioManager.mli)
-$ (cd _build/default && /Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/PortfolioManager.cma lib/.PortfolioManager.objs/byte/portfolioManager.cmo)
-$ (cd _build/default && /Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I bin/.main.eobjs/byte -I lib/.PortfolioManager.objs/byte -no-alias-deps -opaque -o bin/.main.eobjs/byte/dune__exe__Main.cmi -c -intf bin/main.mli)
-$ (cd _build/default && /Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.PortfolioManager.eobjs/byte -I test/.PortfolioManager.eobjs/native -intf-suffix .ml -no-alias-deps -opaque -o test/.PortfolioManager.eobjs/native/dune__exe__PortfolioManager.cmx -c -impl test/PortfolioManager.ml)
-$ (cd _build/default && /Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I lib/.PortfolioManager.objs/byte -I lib/.PortfolioManager.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
-$ (cd _build/default && /Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -I lib/.PortfolioManager.objs/byte -I lib/.PortfolioManager.objs/native -intf-suffix .ml-gen -no-alias-deps -opaque -o lib/.PortfolioManager.objs/native/portfolioManager.cmx -c -impl lib/portfolioManager.ml-gen)
-$ (cd _build/default && /Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/PortfolioManager.cmxa lib/.PortfolioManager.objs/native/portfolioManager.cmx)
-$ (cd _build/default && /Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -shared -linkall -I lib -o lib/PortfolioManager.cmxs lib/PortfolioManager.cmxa)
-$ (cd _build/default && /Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o test/PortfolioManager.exe test/.PortfolioManager.eobjs/native/dune__exe__PortfolioManager.cmx)
-$ (cd _build/default && /Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe lib/PortfolioManager.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
+$ (cd _build/default && /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I bin/.main.eobjs/byte -I /Users/jordanibe/.opam/cs3110-2023fa/lib/bytes -I /Users/jordanibe/.opam/cs3110-2023fa/lib/csv -I lib/.PortfolioManager.objs/byte -no-alias-deps -opaque -o bin/.main.eobjs/byte/dune__exe__Main.cmi -c -intf bin/main.mli)
+$ (cd _build/default && /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I /Users/jordanibe/.opam/cs3110-2023fa/lib/bytes -I /Users/jordanibe/.opam/cs3110-2023fa/lib/csv -I lib/.PortfolioManager.objs/byte -I lib/.PortfolioManager.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
+$ (cd _build/default && /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe lib/PortfolioManager.cmxa /Users/jordanibe/.opam/cs3110-2023fa/lib/csv/csv.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)

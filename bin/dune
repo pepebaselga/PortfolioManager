@@ -1,4 +1,5 @@
 (executable
  (public_name PortfolioManager)
  (name main)
- (libraries PortfolioManager))
+ (libraries PortfolioManager csv))
+
