@@ -4,10 +4,10 @@ build:
 	dune build
 
 utop:
-	OCAMLRUNPARAM=b dune utop src
+	OCAMLRUNPARAM=b dune utop bin
 
 test:
-	OCAMLRUNPARAM=b dune exec test/main.exe
+	OCAMLRUNPARAM=b dune exec test/test.exe
 
 run:
 	OCAMLRUNPARAM=b dune exec bin/run.exe

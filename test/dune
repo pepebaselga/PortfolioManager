@@ -1,2 +1,5 @@
-(test
- (name PortfolioManager))
+(executable
+ (name test)
+ (libraries PortfolioManager ounit2))
+
+ 

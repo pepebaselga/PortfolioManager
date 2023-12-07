@@ -1,2 +1,5 @@
 (library
- (name PortfolioManager))
+ (public_name PortfolioManager)
+ (name PortfolioManager)
+ (modules module1)
+ (libraries str csv))

@@ -1,5 +1,0 @@
-(executable
- (public_name PortfolioManager)
- (name module1)
- (libraries PortfolioManager csv))
-

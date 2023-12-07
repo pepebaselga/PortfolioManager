@@ -1,7 +1,21 @@
 lib: [
   "_build/install/default/lib/PortfolioManager/META"
+  "_build/install/default/lib/PortfolioManager/PortfolioManager.a"
+  "_build/install/default/lib/PortfolioManager/PortfolioManager.cma"
+  "_build/install/default/lib/PortfolioManager/PortfolioManager.cmxa"
   "_build/install/default/lib/PortfolioManager/dune-package"
+  "_build/install/default/lib/PortfolioManager/module1.ml"
   "_build/install/default/lib/PortfolioManager/opam"
+  "_build/install/default/lib/PortfolioManager/portfolioManager.cmi"
+  "_build/install/default/lib/PortfolioManager/portfolioManager.cmt"
+  "_build/install/default/lib/PortfolioManager/portfolioManager.cmx"
+  "_build/install/default/lib/PortfolioManager/portfolioManager.ml"
+  "_build/install/default/lib/PortfolioManager/portfolioManager__Module1.cmi"
+  "_build/install/default/lib/PortfolioManager/portfolioManager__Module1.cmt"
+  "_build/install/default/lib/PortfolioManager/portfolioManager__Module1.cmx"
+]
+libexec: [
+  "_build/install/default/lib/PortfolioManager/PortfolioManager.cmxs"
 ]
 bin: [
   "_build/install/default/bin/PortfolioManager"

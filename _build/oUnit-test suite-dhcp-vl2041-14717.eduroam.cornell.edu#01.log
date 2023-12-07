@@ -1,0 +1,24 @@
+2023-12-07T21:48:36+00:00 dhcp-vl2041-14717.eduroam.cornell.edu#01 I: Start test test suite:0:check valid date - 1/30/2022.
+2023-12-07T21:48:36+00:00 dhcp-vl2041-14717.eduroam.cornell.edu#01 I: Test test suite:0:check valid date - 1/30/2022 is successful.
+2023-12-07T21:48:36+00:00 dhcp-vl2041-14717.eduroam.cornell.edu#01 I: End test test suite:0:check valid date - 1/30/2022.
+2023-12-07T21:48:36+00:00 dhcp-vl2041-14717.eduroam.cornell.edu#01 I: Start test test suite:2:check valid date - 5/31/2023.
+2023-12-07T21:48:36+00:00 dhcp-vl2041-14717.eduroam.cornell.edu#01 I: Test test suite:2:check valid date - 5/31/2023 is successful.
+2023-12-07T21:48:36+00:00 dhcp-vl2041-14717.eduroam.cornell.edu#01 I: End test test suite:2:check valid date - 5/31/2023.
+2023-12-07T21:48:36+00:00 dhcp-vl2041-14717.eduroam.cornell.edu#01 I: Start test test suite:4:check valid date - 13/20/2022.
+2023-12-07T21:48:36+00:00 dhcp-vl2041-14717.eduroam.cornell.edu#01 I: Test test suite:4:check valid date - 13/20/2022 is successful.
+2023-12-07T21:48:36+00:00 dhcp-vl2041-14717.eduroam.cornell.edu#01 I: End test test suite:4:check valid date - 13/20/2022.
+2023-12-07T21:48:36+00:00 dhcp-vl2041-14717.eduroam.cornell.edu#01 I: Start test test suite:6:candlestick to_string.
+2023-12-07T21:48:36+00:00 dhcp-vl2041-14717.eduroam.cornell.edu#01 I: Test test suite:6:candlestick to_string is successful.
+2023-12-07T21:48:36+00:00 dhcp-vl2041-14717.eduroam.cornell.edu#01 I: End test test suite:6:candlestick to_string.
+2023-12-07T21:48:36+00:00 dhcp-vl2041-14717.eduroam.cornell.edu#01 I: Start test test suite:7:candlestick eod change (profit).
+2023-12-07T21:48:36+00:00 dhcp-vl2041-14717.eduroam.cornell.edu#01 I: Test test suite:7:candlestick eod change (profit) is successful.
+2023-12-07T21:48:36+00:00 dhcp-vl2041-14717.eduroam.cornell.edu#01 I: End test test suite:7:candlestick eod change (profit).
+2023-12-07T21:48:36+00:00 dhcp-vl2041-14717.eduroam.cornell.edu#01 I: Start test test suite:9:candlestick eod change (even).
+2023-12-07T21:48:36+00:00 dhcp-vl2041-14717.eduroam.cornell.edu#01 I: Test test suite:9:candlestick eod change (even) is successful.
+2023-12-07T21:48:36+00:00 dhcp-vl2041-14717.eduroam.cornell.edu#01 I: End test test suite:9:candlestick eod change (even).
+2023-12-07T21:48:36+00:00 dhcp-vl2041-14717.eduroam.cornell.edu#01 I: Start test test suite:11:candlestick color (loss).
+2023-12-07T21:48:36+00:00 dhcp-vl2041-14717.eduroam.cornell.edu#01 I: Test test suite:11:candlestick color (loss) is successful.
+2023-12-07T21:48:36+00:00 dhcp-vl2041-14717.eduroam.cornell.edu#01 I: End test test suite:11:candlestick color (loss).
+2023-12-07T21:48:36+00:00 dhcp-vl2041-14717.eduroam.cornell.edu#01 I: Start test test suite:13:csv to stock.
+2023-12-07T21:48:36+00:00 dhcp-vl2041-14717.eduroam.cornell.edu#01 I: Test test suite:13:csv to stock is successful.
+2023-12-07T21:48:36+00:00 dhcp-vl2041-14717.eduroam.cornell.edu#01 I: End test test suite:13:csv to stock.

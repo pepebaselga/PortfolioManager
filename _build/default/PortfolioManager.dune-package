@@ -1,6 +1,45 @@
 (lang dune 3.10)
 (name PortfolioManager)
-(sections (lib .) (bin ../../bin))
+(sections (lib .) (libexec .) (bin ../../bin))
 (files
- (lib (META dune-package opam))
- (bin (PortfolioManager PortfolioManager)))
+ (lib
+  (META
+   PortfolioManager.a
+   PortfolioManager.cma
+   PortfolioManager.cmxa
+   dune-package
+   module1.ml
+   opam
+   portfolioManager.cmi
+   portfolioManager.cmt
+   portfolioManager.cmx
+   portfolioManager.ml
+   portfolioManager__Module1.cmi
+   portfolioManager__Module1.cmt
+   portfolioManager__Module1.cmx))
+ (libexec (PortfolioManager.cmxs))
+ (bin (PortfolioManager)))
+(library
+ (name PortfolioManager)
+ (kind normal)
+ (archives (byte PortfolioManager.cma) (native PortfolioManager.cmxa))
+ (plugins (byte PortfolioManager.cma) (native PortfolioManager.cmxs))
+ (native_archives PortfolioManager.a)
+ (requires str csv)
+ (main_module_name PortfolioManager)
+ (modes byte native)
+ (modules
+  (wrapped
+   (group
+    (alias
+     (obj_name portfolioManager)
+     (visibility public)
+     (kind alias)
+     (source (path PortfolioManager) (impl (path portfolioManager.ml-gen))))
+    (name PortfolioManager)
+    (modules
+     (module
+      (obj_name portfolioManager__Module1)
+      (visibility public)
+      (source (path Module1) (impl (path module1.ml))))))
+   (wrapped true))))
