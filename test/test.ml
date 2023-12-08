@@ -1,6 +1,7 @@
 open OUnit2
 open PortfolioManager
 open Module1
+open Module2
 
 let vd1 = Date.make_date 1 2 2023
 let vd2 = Date.make_date 2 28 2022
@@ -178,15 +179,99 @@ let date_tests =
   let stock_tests =
     [
       ("csv to stock" >:: fun _ ->
-      assert_equal (Stock.yf_to_stock csv1a) (Stock.yf_to_stock csv1b) ~printer: (fun x -> Stock.to_string x));
+      assert_equal (Stock.yf_to_stock "APPL" csv1a) (Stock.yf_to_stock "APPL" csv1b) ~printer: (fun x -> Stock.to_string x));
       ("csv to stock/to_string" >:: fun _ ->
-      assert_equal (Stock.to_string(Stock.yf_to_stock csv2)) (csv2str) ~printer: (fun x -> x));
+      assert_equal (Stock.to_string(Stock.yf_to_stock "APPL" csv2)) ("APPL: "^(csv2str)) ~printer: (fun x -> x));
   
     ]
 let portfolio_tests =
   [
+   (* Test for add_asset function *)
+   "test make_asset" >:: (fun _ ->
+    let example = Asset.make_asset "Example Company" 100.0 50.0 (Date.make_date 1 1 2023) "Technology" in
+    assert_equal Asset.example_asset example ~printer:Asset.asset_to_string
+    );
+  "add_asset" >:: (fun _ ->
+    let new_asset = Asset.make_asset "Microsoft" 100.0 50.0 (Date.make_date 1 1 2023) "Technology" in
+    let portfolio = Asset.add_asset [] new_asset in
+    assert_equal [new_asset] portfolio ~printer:Asset.portfolio_to_string
+  );
+  (* Test for remove_asset function *)
+  "remove_asset" >:: (fun _ ->
+    let portfolio = Asset.remove_asset [Asset.example_asset] "Example Company" in
+    assert_equal [] portfolio ~printer:Asset.portfolio_to_string
+  );
+  (* Test for update_asset_quantity function *)
+  "update_asset_quantity" >:: (fun _ ->
+    let updated_portfolio = Asset.update_asset_quantity [Asset.example_asset] "Example Company" 200.0 in
+    let expected_asset = {Asset.example_asset with quantity = 200.0} in
+    assert_equal [expected_asset] updated_portfolio ~printer:Asset.portfolio_to_string
+  );
+      (* Test adding a non-existent asset *)
+  "add_non_existent_asset" >:: (fun _ ->
+    let non_existent_asset = Asset.make_asset "Non-existent" 50.0 100.0 (Date.make_date 1 1 2022) "Unknown" in
+    let portfolio = Asset.add_asset [] non_existent_asset in
+    assert_equal [non_existent_asset] portfolio ~printer:Asset.portfolio_to_string
+  );
+  (* Test removing a non-existent asset from an empty portfolio *)
+  "remove_non_existent_asset_empty_portfolio" >:: (fun _ ->
+    let portfolio = Asset.remove_asset [] "Non-existent" in
+    assert_equal [] portfolio ~printer:Asset.portfolio_to_string
+  );
+  (* Test removing a non-existent asset from a non-empty portfolio *)
+  "remove_non_existent_asset_non_empty_portfolio" >:: (fun _ ->
+    let portfolio = Asset.remove_asset [Asset.example_asset] "Non-existent" in
+    assert_equal [Asset.example_asset] portfolio ~printer:Asset.portfolio_to_string
+  );
+  (* Test updating the quantity of a non-existent asset *)
+  "update_quantity_non_existent_asset" >:: (fun _ ->
+    let portfolio = Asset.update_asset_quantity [Asset.example_asset] "Non-existent" 300.0 in
+    assert_equal [Asset.example_asset] portfolio ~printer:Asset.portfolio_to_string
+  );
+  (* Test adding a non-existent asset *)
+  "add_non_existent_asset" >:: (fun _ ->
+    let non_existent_asset = Asset.make_asset "Non-existent" 50.0 100.0 (Date.make_date 1 1 2022) "Unknown" in
+    let portfolio = Asset.add_asset [] non_existent_asset in
+    assert_equal [non_existent_asset] portfolio ~printer:Asset.portfolio_to_string
+  );
+    (* Test removing a non-existent asset from an empty portfolio *)
+  "remove_non_existent_asset_empty_portfolio" >:: (fun _ ->
+    let portfolio = Asset.remove_asset [] "Non-existent" in
+    assert_equal [] portfolio ~printer:Asset.portfolio_to_string
+  );
+    (* Test removing a non-existent asset from a non-empty portfolio *)
+  "remove_non_existent_asset_non_empty_portfolio" >:: (fun _ ->
+    let portfolio = Asset.remove_asset [Asset.example_asset] "Non-existent" in
+    assert_equal [Asset.example_asset] portfolio ~printer:Asset.portfolio_to_string
+  );
+    (* Test updating the quantity of a non-existent asset *)
+  "update_quantity_non_existent_asset" >:: (fun _ ->
+    let portfolio = Asset.update_asset_quantity [Asset.example_asset] "Non-existent" 300.0 in
+    assert_equal [Asset.example_asset] portfolio ~printer:Asset.portfolio_to_string
+  );
+  (* Test asset_to_string function *)
+  "asset_to_string" >:: (fun _ ->
+    let test_asset = Asset.make_asset "Test Asset" 150.0 75.0 (Date.make_date 1 1 2023) "Finance" in
+    let expected_string = "[Name: Test Asset, Quantity: 150.00, Purchase Price: 75.00, Date Purchased: 1/1/2023, Sector: Finance]" in
+    assert_equal expected_string (Asset.asset_to_string test_asset) ~printer:(fun x -> x)
+  );
+  (* Test portfolio_to_string function with a single asset *)
+  "portfolio_to_string_single_asset" >:: (fun _ ->
+    let test_asset = Asset.make_asset "Test Asset" 150.0 75.0 (Date.make_date 1 1 2023) "Finance" in
+    let test_portfolio = [test_asset] in
+    let expected_string = "[Name: Test Asset, Quantity: 150.00, Purchase Price: 75.00, Date Purchased: 1/1/2023, Sector: Finance]" in
+    assert_equal expected_string (Asset.portfolio_to_string test_portfolio) ~printer:(fun x -> x)
+  );
+  (* Test portfolio_to_string function with multiple assets *)
+  "portfolio_to_string_multiple_assets" >:: (fun _ ->
+    let asset1 = Asset.make_asset "Asset One" 100.0 50.0 (Date.make_date 1 1 2023) "Tech" in
+    let asset2 = Asset.make_asset "Asset Two" 200.0 100.0 (Date.make_date 2 1 2023) "Health" in
+    let test_portfolio = [asset1; asset2] in
+    let expected_string = "[Name: Asset One, Quantity: 100.00, Purchase Price: 50.00, Date Purchased: 1/1/2023, Sector: Tech], [Name: Asset Two, Quantity: 200.00, Purchase Price: 100.00, Date Purchased: 2/1/2023, Sector: Health]" in
+    assert_equal expected_string (Asset.portfolio_to_string test_portfolio) ~printer:(fun x -> x)
+  );
   ]
 let suite =
   "test suite"
-  >::: List.flatten [date_tests; candle_tests; stock_tests; portfolio_tests]
+  >::: List.flatten [date_tests; candle_tests; stock_tests; portfolio_tests;]
 let () = run_test_tt_main suite

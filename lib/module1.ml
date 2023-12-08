@@ -5,11 +5,11 @@ module Date = struct
   type comp = LT | GT | EQ
   let check_date (d: date): bool =
     let check_helper (d: date) =
-      let long day = (day > 1) && (day <= 31) in
-      let short day = (day > 1) && (day <= 30) in
+      let long day = (day >= 1) && (day <= 31) in
+      let short day = (day >= 1) && (day <= 30) in
       match d.month with
-      | 2 -> if (d.year mod 4) = 0 then (d.day > 1) && (d.day <= 29) 
-      else (d.day > 1) && (d.day <= 28)
+      | 2 -> if (d.year mod 4) = 0 then (d.day >= 1) && (d.day <= 29) 
+      else (d.day >= 1) && (d.day <= 28)
       | 11 -> short d.day
       | 9 -> short d.day
       | 12 -> long d.day
@@ -98,9 +98,9 @@ module Candlestick = struct
     else Grey
 end
 module Stock = struct
-  type stock = (Date.date * Candlestick.cs) list
+  type stock = (string * (Date.date * Candlestick.cs) list)
   
-let rec yf_helper (csv : string list list) : stock =
+let rec yf_helper (csv : string list list) : (Date.date * Candlestick.cs) list =
   match csv with
   | [] -> []
   | [h] -> [Date.of_string(List.nth h 0), 
@@ -110,35 +110,48 @@ let rec yf_helper (csv : string list list) : stock =
             (float_of_string (List.nth h 3))
             (float_of_string (List.nth h 4))]
   | h::t -> yf_helper [h] @ yf_helper t
-let yf_to_stock  (csv : string list list) =
+let yf_to_stock  (ticker: string) (csv : string list list): stock =
+  let candle = 
   match csv with
   | h::t -> yf_helper t
-  | [] -> yf_helper []
-let rec to_string (st : stock) =
-  match st with
-  | [] -> ""
-  | [d,cs] -> Date.to_string d ^ ": " ^ Candlestick.to_string cs
-  | h :: t -> to_string [h] ^ "\n" ^ to_string t 
-let rec find_date (stock : stock) (day1 : Date.date) =
-  match stock with
+  | [] -> yf_helper [] in 
+  (ticker, candle)
+let rec to_string_helper (candle : (Date.date * Candlestick.cs) list) = 
+    match candle with
+    | [] -> ""
+    | [d,cs] -> Date.to_string d ^ ": " ^ Candlestick.to_string cs
+    | h :: t -> to_string_helper [h] ^ "\n" ^ to_string_helper t 
+let rec to_string (st : stock): string =
+  let name,candle = st in
+  let p1 = to_string_helper candle in
+  name^": "^p1
+
+
+let rec find_date_helper (candle : (Date.date * Candlestick.cs) list) (day1 : Date.date) =
+  match candle with
   | [] -> raise (failwith "No data for this date")
-  | (d,cs)::t -> if Date.compare day1 d = EQ then cs else find_date t day1
+  | (d,cs)::t -> if Date.compare day1 d = EQ then cs else find_date_helper t day1
+
+let  find_date (stock : stock) (day1 : Date.date) =
+  let name,candle = stock in
+  let p1 = find_date_helper candle day1 in 
+  (name, p1)
 
   let rec get_dollar_diff (stock : stock) day1 day2 =
   let _ = assert (Date.check_date day1);
           assert (Date.check_date day1);
           assert ((Date.compare day1 day2) = LT);
   in
-  let d1 = find_date stock day1 in 
-  let d2 = find_date stock day2 in
+  let _,d1 = find_date stock day1 in 
+  let _,d2 = find_date stock day2 in
   d2.closep -. d1.closep
   let rec get_percent_diff (stock : stock) day1 day2 =
     let _ = assert (Date.check_date day1);
             assert (Date.check_date day1);
             assert ((Date.compare day1 day2) = LT);
     in
-    let d1 = find_date stock day1 in 
-    let d2 = find_date stock day2 in
+    let _,d1 = find_date stock day1 in 
+    let _,d2 = find_date stock day2 in
     (d2.closep -. d1.closep) /. d1.closep
   
 end

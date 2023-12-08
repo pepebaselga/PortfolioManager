@@ -1,10 +1,13 @@
+open Module1
+open Date 
+
+
 module Asset = struct
   type asset = {
     name: string;              (* Asset name *)
     quantity: float;           (* Quantity of the asset owned *)
     purchase_price: float;     (* Purchase price of the asset *)
-    current_price: float;      (* Current market price of the asset *)
-    asset_type: string;        (* Type of the asset, e.g., stock, bond *)
+    date_purchased: date;    (* Current market price of the asset *)
     sector: string;            (* Sector the asset belongs to *)
   }
   (* Prrtfolio type is a list of assets *)
@@ -14,8 +17,7 @@ module Asset = struct
     name = "Example Company";
     quantity = 100.0;
     purchase_price = 50.0;
-    current_price = 55.0;
-    asset_type = "Stock";
+    date_purchased =  make_date 1 1 2023;
     sector = "Technology";
   }
   (* Example of creating a portfolio with the example asset *)
@@ -34,4 +36,20 @@ module Asset = struct
       else
         a
     ) portfolio
+  let make_asset (name : string) (quantity: float) (purchase_price : float) (date_purchased : date) (sector : string) : asset =
+    { name = name;
+    quantity = quantity;
+    purchase_price = purchase_price;
+    date_purchased = date_purchased;
+    sector = sector; }
+    let asset_to_string asset =
+      Printf.sprintf "[Name: %s, Quantity: %.2f, Purchase Price: %.2f, Date Purchased: %s, Sector: %s]"
+        asset.name
+        asset.quantity
+        asset.purchase_price
+        (Date.to_string asset.date_purchased)
+        asset.sector
+    let portfolio_to_string portfolio =
+      let asset_strings = List.map asset_to_string portfolio in
+       String.concat ", " asset_strings
 end
