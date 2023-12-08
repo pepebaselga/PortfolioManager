@@ -3,7 +3,7 @@
 # Shared cache: disabled
 # Workspace root: /Users/jordanibe/cs3110/PortfolioManager
 # Auto-detected concurrency: 8
-$ /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlc.opt -config > /var/folders/xs/dz2sddqj22z204t_f4hx700r0000gn/T/dune_b45781_output
+$ /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlc.opt -config > /var/folders/xs/dz2sddqj22z204t_f4hx700r0000gn/T/dune_77b73e_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -30,14 +30,14 @@ $ /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlc.opt -config > /var/folders/xs/
 #        ; "DUNE_SOURCEROOT" : "/Users/jordanibe/cs3110/PortfolioManager"
 #        ; "INSIDE_DUNE" :
 #            "/Users/jordanibe/cs3110/PortfolioManager/_build/default"
+#        ; "MANPATH" :
+#            "/Users/jordanibe/cs3110/PortfolioManager/_build/install/default/man"
 #        ; "OCAMLFIND_IGNORE_DUPS_IN" :
 #            "/Users/jordanibe/cs3110/PortfolioManager/_build/install/default/lib"
 #        ; "OCAMLPATH" :
 #            "/Users/jordanibe/cs3110/PortfolioManager/_build/install/default/lib"
 #        ; "OCAMLTOP_INCLUDE_PATH" :
 #            "/Users/jordanibe/cs3110/PortfolioManager/_build/install/default/lib/toplevel"
-#        ; "OCAML_COLOR" : "always"
-#        ; "OPAMCOLOR" : "always"
 #        }
 #  ; findlib_paths =
 #      [ External "/Users/jordanibe/.opam/cs3110-2023fa/lib/ocaml"
@@ -117,14 +117,8 @@ $ /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlc.opt -config > /var/folders/xs/
 #      }
 #  }
 $ (cd _build/default && /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamldep.opt -modules -impl lib/module1.ml) > _build/default/lib/.PortfolioManager.objs/portfolioManager__Module1.impl.d
-$ (cd _build/default && /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlc.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66..70 -warn-error -a+31 -g -bin-annot -I lib/.PortfolioManager.objs/byte -I /Users/jordanibe/.opam/cs3110-2023fa/lib/bytes -I /Users/jordanibe/.opam/cs3110-2023fa/lib/csv -I /Users/jordanibe/.opam/cs3110-2023fa/lib/ocaml/str -no-alias-deps -opaque -open PortfolioManager -o lib/.PortfolioManager.objs/byte/portfolioManager__Module1.cmo -c -impl lib/module1.ml)
-$ (cd _build/default && /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlc.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66..70 -warn-error -a+31 -g -bin-annot -I bin/.main.eobjs/byte -I /Users/jordanibe/.opam/cs3110-2023fa/lib/bytes -I /Users/jordanibe/.opam/cs3110-2023fa/lib/csv -I /Users/jordanibe/.opam/cs3110-2023fa/lib/ocaml/str -I lib/.PortfolioManager.objs/byte -no-alias-deps -opaque -o bin/.main.eobjs/byte/dune__exe__Main.cmi -c -intf bin/main.mli)
-$ (cd _build/default && /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlc.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66..70 -warn-error -a+31 -g -a -o lib/PortfolioManager.cma lib/.PortfolioManager.objs/byte/portfolioManager.cmo lib/.PortfolioManager.objs/byte/portfolioManager__Module1.cmo)
-$ (cd _build/default && /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlc.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66..70 -warn-error -a+31 -g -bin-annot -I test/.test.eobjs/byte -I /Users/jordanibe/.opam/cs3110-2023fa/lib/bytes -I /Users/jordanibe/.opam/cs3110-2023fa/lib/csv -I /Users/jordanibe/.opam/cs3110-2023fa/lib/ocaml/str -I /Users/jordanibe/.opam/cs3110-2023fa/lib/ocaml/unix -I /Users/jordanibe/.opam/cs3110-2023fa/lib/ounit2 -I /Users/jordanibe/.opam/cs3110-2023fa/lib/ounit2/advanced -I /Users/jordanibe/.opam/cs3110-2023fa/lib/seq -I /Users/jordanibe/.opam/cs3110-2023fa/lib/stdlib-shims -I lib/.PortfolioManager.objs/byte -no-alias-deps -opaque -o test/.test.eobjs/byte/dune__exe__Test.cmi -c -intf test/test.mli)
-$ (cd _build/default && /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66..70 -warn-error -a+31 -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I /Users/jordanibe/.opam/cs3110-2023fa/lib/bytes -I /Users/jordanibe/.opam/cs3110-2023fa/lib/csv -I /Users/jordanibe/.opam/cs3110-2023fa/lib/ocaml/str -I lib/.PortfolioManager.objs/byte -I lib/.PortfolioManager.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
-$ (cd _build/default && /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66..70 -warn-error -a+31 -g -I lib/.PortfolioManager.objs/byte -I lib/.PortfolioManager.objs/native -I /Users/jordanibe/.opam/cs3110-2023fa/lib/bytes -I /Users/jordanibe/.opam/cs3110-2023fa/lib/csv -I /Users/jordanibe/.opam/cs3110-2023fa/lib/ocaml/str -intf-suffix .ml -no-alias-deps -opaque -open PortfolioManager -o lib/.PortfolioManager.objs/native/portfolioManager__Module1.cmx -c -impl lib/module1.ml)
-$ (cd _build/default && /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66..70 -warn-error -a+31 -g -I test/.test.eobjs/byte -I test/.test.eobjs/native -I /Users/jordanibe/.opam/cs3110-2023fa/lib/bytes -I /Users/jordanibe/.opam/cs3110-2023fa/lib/csv -I /Users/jordanibe/.opam/cs3110-2023fa/lib/ocaml/str -I /Users/jordanibe/.opam/cs3110-2023fa/lib/ocaml/unix -I /Users/jordanibe/.opam/cs3110-2023fa/lib/ounit2 -I /Users/jordanibe/.opam/cs3110-2023fa/lib/ounit2/advanced -I /Users/jordanibe/.opam/cs3110-2023fa/lib/seq -I /Users/jordanibe/.opam/cs3110-2023fa/lib/stdlib-shims -I lib/.PortfolioManager.objs/byte -I lib/.PortfolioManager.objs/native -intf-suffix .ml -no-alias-deps -opaque -o test/.test.eobjs/native/dune__exe__Test.cmx -c -impl test/test.ml)
-$ (cd _build/default && /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66..70 -warn-error -a+31 -g -a -o lib/PortfolioManager.cmxa lib/.PortfolioManager.objs/native/portfolioManager.cmx lib/.PortfolioManager.objs/native/portfolioManager__Module1.cmx)
-$ (cd _build/default && /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66..70 -warn-error -a+31 -g -shared -linkall -I lib -o lib/PortfolioManager.cmxs lib/PortfolioManager.cmxa)
-$ (cd _build/default && /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66..70 -warn-error -a+31 -g -o bin/main.exe /Users/jordanibe/.opam/cs3110-2023fa/lib/ocaml/str/str.cmxa /Users/jordanibe/.opam/cs3110-2023fa/lib/csv/csv.cmxa lib/PortfolioManager.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
-$ (cd _build/default && /Users/jordanibe/.opam/cs3110-2023fa/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66..70 -warn-error -a+31 -g -o test/test.exe /Users/jordanibe/.opam/cs3110-2023fa/lib/ocaml/str/str.cmxa /Users/jordanibe/.opam/cs3110-2023fa/lib/csv/csv.cmxa lib/PortfolioManager.cmxa /Users/jordanibe/.opam/cs3110-2023fa/lib/ocaml/unix/unix.cmxa /Users/jordanibe/.opam/cs3110-2023fa/lib/stdlib-shims/stdlib_shims.cmxa /Users/jordanibe/.opam/cs3110-2023fa/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/jordanibe/.opam/cs3110-2023fa/lib/ounit2/oUnit.cmxa test/.test.eobjs/native/dune__exe__Test.cmx)
+> File "lib/module1.ml", line 126, characters 0-3:
+> 126 | end
+>       ^^^
+> Error: Syntax error
+[2]

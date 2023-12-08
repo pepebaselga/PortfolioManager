@@ -4,6 +4,9 @@ open Module1
 
 let vd1 : Date.date = Date.make_date 1 2 2023
 let vd2 = Date.make_date 2 28 2022
+let vd3 = Date.make_date 4 19 2004
+let vd4 = Date.make_date 6 11 2006
+let vd5 = Date.make_date 11 24 2009
 let nvd1 = Date.make_date 1 2 3
 let nvd2 = Date.make_date 2 28 20000
 let nvd3 = Date.make_date 2 30 2023
@@ -26,8 +29,8 @@ let csv1b = [["Date"; "Open";	"High";	"Low"; "Close"];
 let csv2 = [["Date"; "Open";	"High";	"Low"; "Close"];
             ["12/4/22"; "1.1"; "1.3"; "0.9"; "1.2" ];
             ["12/5/22"; "1.2"; "1.6"; "1.0"; "1.3" ]]
-let csv2str = "12/4/22: 1.1 | 1.3 | 0.9 | 1.2
-12/5/22: 1.2 | 1.6 | 1. | 1.3"
+let csv2str = "12/4/2022: 1.1 | 1.3 | 0.9 | 1.2
+12/5/2022: 1.2 | 1.6 | 1. | 1.3"
 let csv3 = [["12/4/22"; "1.1"; "1.3"; "0.9"; "1.2" ]]
 
 let date_tests =
@@ -55,7 +58,20 @@ let date_tests =
     ( "check valid date - 5/31/2001" >:: fun _ ->
       assert_equal false
       (Date.check_date nvd4)
-    )
+    );
+    ( "compare dates less than" >:: fun _ -> 
+      assert_equal (Date.date_comp_helper "LT") (Date.compare vd4 vd5)
+    );    
+    ( "compare dates greater than" >:: fun _ -> 
+      assert_equal (Date.date_comp_helper "GT") (Date.compare vd5 vd3)
+    );
+    ( "compare dates equal" >:: fun _ -> 
+      assert_equal (Date.date_comp_helper "EQ") (Date.compare vd5 (Date.of_string "9/24/2022"))
+    );
+    ( "dates to string" >:: fun _ -> 
+      assert_equal ("11/24/2009") (Date.to_string vd5) ~printer: (fun x -> x)
+    );
+
   ]
   let candle_tests =
   [
