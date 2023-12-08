@@ -8,7 +8,8 @@ module Date = struct
       let long day = (day > 1) && (day <= 31) in
       let short day = (day > 1) && (day <= 30) in
       match d.month with
-      | 2 -> (d.day > 1) && (d.day <= 29)
+      | 2 -> if (d.year mod 4) = 0 then (d.day > 1) && (d.day <= 29) 
+      else (d.day > 1) && (d.day <= 28)
       | 11 -> short d.day
       | 9 -> short d.day
       | 12 -> long d.day
@@ -53,6 +54,7 @@ module Date = struct
     | "LT" -> LT
     | "GT" -> GT
     | "EQ" -> EQ
+    | _ -> raise (failwith "inexhaustive pattern matching")
   let of_string (s : string) = let (lst : string list) =   
     Str.split (Str.regexp "/") s in let year = (int_of_string (List.nth lst 2)) in
     let year1 = if year < 1000 then year + 2000 else year in
@@ -60,10 +62,12 @@ module Date = struct
     day = int_of_string (List.nth lst 1); 
     year = year1}
   let to_string (d : date) =
+    if (check_date d = false) then raise (failwith "invalid date") else
     let year = if d.year < 1000 then d.year+2000 else d.year in
     (string_of_int d.month) ^ "/" ^ (string_of_int d.day) ^ "/" ^ (string_of_int year)
   let pp_date (d: date): string =
-    Printf.sprintf "Date: %i/%i/%i" d.month d.day d.year;
+    if (check_date d = false) then raise (failwith "invalid date") else
+    Printf.sprintf "%i/%i/%i" d.month d.day d.year;
 end
 module Candlestick = struct
   type cs = {

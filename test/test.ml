@@ -2,15 +2,20 @@ open OUnit2
 open PortfolioManager
 open Module1
 
-let vd1 : Date.date = Date.make_date 1 2 2023
+let vd1 = Date.make_date 1 2 2023
 let vd2 = Date.make_date 2 28 2022
 let vd3 = Date.make_date 4 19 2004
 let vd4 = Date.make_date 6 11 2006
 let vd5 = Date.make_date 11 24 2009
+let vd6 = Date.make_date 12 31 2021
 let nvd1 = Date.make_date 1 2 3
 let nvd2 = Date.make_date 2 28 20000
 let nvd3 = Date.make_date 2 30 2023
 let nvd4 = Date.make_date 11 31 2023
+
+let nvd5 = Date.make_date 9 31 2021
+let lvd1 = Date.make_date 2 29 2020
+let lnv1 = Date.make_date 2 29 2022
 let cs1 : Candlestick.cs = Candlestick.make_cs 1.1 1.3 0.9 1.2
 let cs2 : Candlestick.cs = Candlestick.make_cs 1.4 1.7 0.8 1.0
 let cs3 : Candlestick.cs = Candlestick.make_cs 1.2 1.7 0.8 1.2
@@ -59,6 +64,14 @@ let date_tests =
       assert_equal false
       (Date.check_date nvd4)
     );
+    ("check valid date leap- 2/29/2020" >:: fun _ ->
+      assert_equal true
+      (Date.check_date lvd1)
+    );
+    ("check valid invalid-date leap- 2/29/2022" >:: fun _ ->
+      assert_equal false
+      (Date.check_date lnv1)
+    );
     ( "compare dates less than" >:: fun _ -> 
       assert_equal (Date.date_comp_helper "LT") (Date.compare vd4 vd5)
     );    
@@ -71,6 +84,76 @@ let date_tests =
     ( "dates to string" >:: fun _ -> 
       assert_equal ("11/24/2009") (Date.to_string vd5) ~printer: (fun x -> x)
     );
+    ( "check pp_date - 1/2/2023" >:: fun _ ->
+      assert_equal "1/2/2023"
+      (Date.pp_date vd1)
+    );
+    ( "check pp_date - 2/28/2022" >:: fun _ ->
+      assert_equal "2/28/2022"
+      (Date.pp_date vd2)
+    );
+    ("check pp_date- 12/31/2021" >:: fun _ ->
+      assert_equal "12/31/2021"
+      (Date.pp_date vd6)
+    );
+    ("check pp_date leap- 2/29/2020" >:: fun _ ->
+      assert_equal "2/29/2020"
+      (Date.pp_date lvd1)
+    );
+    ( "check pp_date - invalid-date leap" >:: fun _ ->
+      assert_raises (Failure "invalid date") (fun () -> Date.pp_date lnv1)
+    );
+    ( "check pp_date - invalid-date" >:: fun _ ->
+      assert_raises (Failure "invalid date") (fun () -> Date.pp_date nvd1)
+    );
+    ( "check pp_date - invalid-date" >:: fun _ ->
+      assert_raises (Failure "invalid date") (fun () -> Date.pp_date nvd2)
+    );
+    ( "check pp_date - invalid-date" >:: fun _ ->
+      assert_raises (Failure "invalid date") (fun () -> Date.pp_date nvd3)
+    );
+    ( "check pp_date - invalid-date" >:: fun _ ->
+      assert_raises (Failure "invalid date") (fun () -> Date.pp_date nvd4)
+    );
+    ( "check pp_date - invalid-date " >:: fun _ ->
+      assert_raises (Failure "invalid date") (fun () -> Date.pp_date nvd5)
+    );
+    ( "check to_string - 1/2/2023" >:: fun _ ->
+      assert_equal "1/2/2023" (Date.to_string vd1)
+    );
+    ( "check pp_date - 2/28/2022" >:: fun _ ->
+      assert_equal "2/28/2022"
+      (Date.to_string vd2)
+    );
+    ("check pp_date- 12/31/2021" >:: fun _ ->
+      assert_equal "12/31/2021"
+      (Date.to_string vd6)
+    );
+    ("check to_string leap- 2/29/2020" >:: fun _ ->
+      assert_equal "2/29/2020"
+      (Date.to_string lvd1)
+    );
+    ( "check to_string - invalid-date" >:: fun _ ->
+      assert_raises (Failure "invalid date") (fun () -> Date.to_string nvd1)
+    );
+    ( "check to_string - invalid-date" >:: fun _ ->
+      assert_raises (Failure "invalid date") (fun () -> Date.to_string nvd2)
+    );
+    ( "check to_string - invalid-date" >:: fun _ ->
+      assert_raises (Failure "invalid date") (fun () -> Date.to_string nvd3)
+    );
+    ( "check to_string - invalid-date" >:: fun _ ->
+      assert_raises (Failure "invalid date") (fun () -> Date.to_string nvd4)
+    );
+    ( "check to_string - invalid-date leap" >:: fun _ ->
+      assert_raises (Failure "invalid date") (fun () -> Date.to_string lnv1)
+    );
+    ( "check to_string - invalid-date " >:: fun _ ->
+      assert_raises (Failure "invalid date") (fun () -> Date.to_string nvd5)
+    );
+    ("check of_string vd1">:: fun _ -> assert_equal vd1 (Date.of_string ("1/2/2023")));
+    ("check of_string vd2">:: fun _ -> assert_equal vd2 (Date.of_string ("2/28/2022")));
+    ("check of_string vd3">:: fun _ -> assert_equal vd6 (Date.of_string ("12/31/2021")));
 
   ]
   let candle_tests =
