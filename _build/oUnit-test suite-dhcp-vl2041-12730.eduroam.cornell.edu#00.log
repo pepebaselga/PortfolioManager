@@ -1,0 +1,495 @@
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Runner: processes
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Chooser: simple
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Configuration suite_name = "test suite"
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Configuration cache_filename = "/Users/pepebaselga/cs3110/PortfolioManager/_build/oUnit-$(suite_name).cache"
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Configuration run_gc_full_major = "true"
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Configuration display = "true"
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Configuration results_style_1_X = "false"
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Configuration testdata_dir = "none"
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Configuration health_check_interval = "1."
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Configuration verbose = "false"
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Configuration chooser = "simple"
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Configuration output_html_dir = "none"
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Configuration processes_kill_period = "5."
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Configuration runner = "processes"
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Configuration shards = "2"
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Configuration processes_grace_period = "5."
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Configuration log_encoding = "utf-8"
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Configuration output_junit_file = "none"
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Configuration ci = "false"
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Configuration output_file = "/Users/pepebaselga/cs3110/PortfolioManager/_build/oUnit-$(suite_name)-$(shard_id).log"
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Using 2 workers maximum.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Starting worker number dhcp-vl2041-12730.eduroam.cornell.edu#01.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Worker dhcp-vl2041-12730.eduroam.cornell.edu#01 started.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Starting worker number dhcp-vl2041-12730.eduroam.cornell.edu#02.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Worker dhcp-vl2041-12730.eduroam.cornell.edu#02 started.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:1:check valid date - 2/28/2022, test suite:0:check valid date - 1/30/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:0:check valid date - 1/30/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:1:check valid date - 2/28/2022, test suite:0:check valid date - 1/30/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:1:check valid date - 2/28/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:1:check valid date - 2/28/2022, test suite:0:check valid date - 1/30/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:0:check valid date - 1/30/2022 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:1:check valid date - 2/28/2022, test suite:0:check valid date - 1/30/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:0:check valid date - 1/30/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:1:check valid date - 2/28/2022, test suite:0:check valid date - 1/30/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:2:check valid date - 5/31/2023, test suite:1:check valid date - 2/28/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:2:check valid date - 5/31/2023.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:2:check valid date - 5/31/2023, test suite:1:check valid date - 2/28/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:2:check valid date - 5/31/2023 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:2:check valid date - 5/31/2023, test suite:1:check valid date - 2/28/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:2:check valid date - 5/31/2023.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:2:check valid date - 5/31/2023, test suite:1:check valid date - 2/28/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:3:check invalid date - 2/31/2022, test suite:1:check valid date - 2/28/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:3:check invalid date - 2/31/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:3:check invalid date - 2/31/2022, test suite:1:check valid date - 2/28/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:1:check valid date - 2/28/2022 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:3:check invalid date - 2/31/2022, test suite:1:check valid date - 2/28/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:1:check valid date - 2/28/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:3:check invalid date - 2/31/2022, test suite:1:check valid date - 2/28/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:3:check invalid date - 2/31/2022 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:4:check valid date - 13/20/2022, test suite:3:check invalid date - 2/31/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:3:check invalid date - 2/31/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:4:check valid date - 13/20/2022, test suite:3:check invalid date - 2/31/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:5:check valid date - 5/31/2001, test suite:4:check valid date - 13/20/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:4:check valid date - 13/20/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:5:check valid date - 5/31/2001, test suite:4:check valid date - 13/20/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:5:check valid date - 5/31/2001.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:5:check valid date - 5/31/2001, test suite:4:check valid date - 13/20/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:5:check valid date - 5/31/2001 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:5:check valid date - 5/31/2001, test suite:4:check valid date - 13/20/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:5:check valid date - 5/31/2001.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:5:check valid date - 5/31/2001, test suite:4:check valid date - 13/20/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:6:check valid date leap- 2/29/2020, test suite:4:check valid date - 13/20/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:6:check valid date leap- 2/29/2020.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:6:check valid date leap- 2/29/2020, test suite:4:check valid date - 13/20/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:4:check valid date - 13/20/2022 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:6:check valid date leap- 2/29/2020, test suite:4:check valid date - 13/20/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:4:check valid date - 13/20/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:6:check valid date leap- 2/29/2020, test suite:4:check valid date - 13/20/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:7:check valid invalid-date leap- 2/29/2022, test suite:6:check valid date leap- 2/29/2020.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:7:check valid invalid-date leap- 2/29/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:7:check valid invalid-date leap- 2/29/2022, test suite:6:check valid date leap- 2/29/2020.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:6:check valid date leap- 2/29/2020 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:7:check valid invalid-date leap- 2/29/2022, test suite:6:check valid date leap- 2/29/2020.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:6:check valid date leap- 2/29/2020.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:7:check valid invalid-date leap- 2/29/2022, test suite:6:check valid date leap- 2/29/2020.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:8:compare dates less than, test suite:7:check valid invalid-date leap- 2/29/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:8:compare dates less than.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:8:compare dates less than, test suite:7:check valid invalid-date leap- 2/29/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:7:check valid invalid-date leap- 2/29/2022 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:8:compare dates less than, test suite:7:check valid invalid-date leap- 2/29/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:7:check valid invalid-date leap- 2/29/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:8:compare dates less than, test suite:7:check valid invalid-date leap- 2/29/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:9:compare dates greater than, test suite:8:compare dates less than.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:8:compare dates less than is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:9:compare dates greater than.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:9:compare dates greater than, test suite:8:compare dates less than.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:8:compare dates less than.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:9:compare dates greater than, test suite:8:compare dates less than.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:10:compare dates equal, test suite:9:compare dates greater than.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:10:compare dates equal.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:10:compare dates equal, test suite:9:compare dates greater than.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:9:compare dates greater than is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:10:compare dates equal, test suite:9:compare dates greater than.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:9:compare dates greater than.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:10:compare dates equal is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:10:compare dates equal, test suite:9:compare dates greater than.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:10:compare dates equal.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:11:dates to string, test suite:10:compare dates equal.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:12:check pp_date - 1/2/2023, test suite:11:dates to string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:11:dates to string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:12:check pp_date - 1/2/2023.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:12:check pp_date - 1/2/2023, test suite:11:dates to string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:12:check pp_date - 1/2/2023 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:12:check pp_date - 1/2/2023, test suite:11:dates to string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:12:check pp_date - 1/2/2023.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:12:check pp_date - 1/2/2023, test suite:11:dates to string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:13:check pp_date - 2/28/2022, test suite:11:dates to string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:11:dates to string is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:13:check pp_date - 2/28/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:13:check pp_date - 2/28/2022, test suite:11:dates to string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:11:dates to string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:13:check pp_date - 2/28/2022, test suite:11:dates to string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:14:check pp_date- 12/31/2021, test suite:13:check pp_date - 2/28/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:14:check pp_date- 12/31/2021.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:14:check pp_date- 12/31/2021, test suite:13:check pp_date - 2/28/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:13:check pp_date - 2/28/2022 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:14:check pp_date- 12/31/2021, test suite:13:check pp_date - 2/28/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:13:check pp_date - 2/28/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:14:check pp_date- 12/31/2021, test suite:13:check pp_date - 2/28/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:15:check pp_date leap- 2/29/2020, test suite:14:check pp_date- 12/31/2021.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:15:check pp_date leap- 2/29/2020.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:15:check pp_date leap- 2/29/2020, test suite:14:check pp_date- 12/31/2021.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:14:check pp_date- 12/31/2021 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:15:check pp_date leap- 2/29/2020, test suite:14:check pp_date- 12/31/2021.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:14:check pp_date- 12/31/2021.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:15:check pp_date leap- 2/29/2020, test suite:14:check pp_date- 12/31/2021.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:16:check pp_date - invalid-date leap, test suite:15:check pp_date leap- 2/29/2020.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:16:check pp_date - invalid-date leap.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:16:check pp_date - invalid-date leap, test suite:15:check pp_date leap- 2/29/2020.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:15:check pp_date leap- 2/29/2020 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:16:check pp_date - invalid-date leap, test suite:15:check pp_date leap- 2/29/2020.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:15:check pp_date leap- 2/29/2020.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:16:check pp_date - invalid-date leap, test suite:15:check pp_date leap- 2/29/2020.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:17:check pp_date - invalid-date, test suite:16:check pp_date - invalid-date leap.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:17:check pp_date - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:17:check pp_date - invalid-date, test suite:16:check pp_date - invalid-date leap.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:16:check pp_date - invalid-date leap is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:17:check pp_date - invalid-date, test suite:16:check pp_date - invalid-date leap.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:16:check pp_date - invalid-date leap.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:17:check pp_date - invalid-date, test suite:16:check pp_date - invalid-date leap.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:18:check pp_date - invalid-date, test suite:17:check pp_date - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:18:check pp_date - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:18:check pp_date - invalid-date, test suite:17:check pp_date - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:17:check pp_date - invalid-date is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:18:check pp_date - invalid-date, test suite:17:check pp_date - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:17:check pp_date - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:18:check pp_date - invalid-date, test suite:17:check pp_date - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:18:check pp_date - invalid-date is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:19:check pp_date - invalid-date, test suite:18:check pp_date - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:18:check pp_date - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:19:check pp_date - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:19:check pp_date - invalid-date, test suite:18:check pp_date - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:20:check pp_date - invalid-date, test suite:19:check pp_date - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:20:check pp_date - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:20:check pp_date - invalid-date, test suite:19:check pp_date - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:19:check pp_date - invalid-date is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:20:check pp_date - invalid-date is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:20:check pp_date - invalid-date, test suite:19:check pp_date - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:19:check pp_date - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:20:check pp_date - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:20:check pp_date - invalid-date, test suite:19:check pp_date - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:22:check to_string - 1/2/2023, test suite:21:check pp_date - invalid-date .
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:21:check pp_date - invalid-date .
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:22:check to_string - 1/2/2023.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:22:check to_string - 1/2/2023, test suite:21:check pp_date - invalid-date .
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:21:check pp_date - invalid-date  is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:22:check to_string - 1/2/2023, test suite:21:check pp_date - invalid-date .
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:21:check pp_date - invalid-date .
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:22:check to_string - 1/2/2023 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:22:check to_string - 1/2/2023, test suite:21:check pp_date - invalid-date .
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:22:check to_string - 1/2/2023.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:23:check pp_date - 2/28/2022, test suite:22:check to_string - 1/2/2023.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:23:check pp_date - 2/28/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:24:check pp_date- 12/31/2021, test suite:23:check pp_date - 2/28/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:24:check pp_date- 12/31/2021.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:24:check pp_date- 12/31/2021, test suite:23:check pp_date - 2/28/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:24:check pp_date- 12/31/2021 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:24:check pp_date- 12/31/2021, test suite:23:check pp_date - 2/28/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:23:check pp_date - 2/28/2022 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:24:check pp_date- 12/31/2021.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:24:check pp_date- 12/31/2021, test suite:23:check pp_date - 2/28/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:23:check pp_date - 2/28/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:25:check to_string leap- 2/29/2020, test suite:23:check pp_date - 2/28/2022.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:25:check to_string leap- 2/29/2020.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:26:check to_string - invalid-date, test suite:25:check to_string leap- 2/29/2020.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:26:check to_string - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:26:check to_string - invalid-date, test suite:25:check to_string leap- 2/29/2020.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:25:check to_string leap- 2/29/2020 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:26:check to_string - invalid-date, test suite:25:check to_string leap- 2/29/2020.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:25:check to_string leap- 2/29/2020.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:26:check to_string - invalid-date, test suite:25:check to_string leap- 2/29/2020.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:27:check to_string - invalid-date, test suite:26:check to_string - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:27:check to_string - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:27:check to_string - invalid-date, test suite:26:check to_string - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:26:check to_string - invalid-date is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:27:check to_string - invalid-date is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:27:check to_string - invalid-date, test suite:26:check to_string - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:26:check to_string - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:27:check to_string - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:27:check to_string - invalid-date, test suite:26:check to_string - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:29:check to_string - invalid-date, test suite:28:check to_string - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:28:check to_string - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:29:check to_string - invalid-date, test suite:28:check to_string - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:29:check to_string - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:29:check to_string - invalid-date, test suite:28:check to_string - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:28:check to_string - invalid-date is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:29:check to_string - invalid-date, test suite:28:check to_string - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:28:check to_string - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:29:check to_string - invalid-date, test suite:28:check to_string - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:30:check to_string - invalid-date leap, test suite:29:check to_string - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:30:check to_string - invalid-date leap.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:30:check to_string - invalid-date leap, test suite:29:check to_string - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:29:check to_string - invalid-date is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:30:check to_string - invalid-date leap, test suite:29:check to_string - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:29:check to_string - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:30:check to_string - invalid-date leap, test suite:29:check to_string - invalid-date.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:31:check to_string - invalid-date , test suite:30:check to_string - invalid-date leap.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:31:check to_string - invalid-date .
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:31:check to_string - invalid-date , test suite:30:check to_string - invalid-date leap.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:31:check to_string - invalid-date  is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:31:check to_string - invalid-date , test suite:30:check to_string - invalid-date leap.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:30:check to_string - invalid-date leap is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:31:check to_string - invalid-date .
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:31:check to_string - invalid-date , test suite:30:check to_string - invalid-date leap.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:30:check to_string - invalid-date leap.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:32:check of_string vd1, test suite:30:check to_string - invalid-date leap.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:32:check of_string vd1.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:33:check of_string vd2, test suite:32:check of_string vd1.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:33:check of_string vd2.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:33:check of_string vd2, test suite:32:check of_string vd1.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:32:check of_string vd1 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:33:check of_string vd2, test suite:32:check of_string vd1.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:32:check of_string vd1.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:33:check of_string vd2, test suite:32:check of_string vd1.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:34:check of_string vd3, test suite:33:check of_string vd2.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:34:check of_string vd3.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:34:check of_string vd3, test suite:33:check of_string vd2.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:33:check of_string vd2 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:34:check of_string vd3, test suite:33:check of_string vd2.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:33:check of_string vd2.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:34:check of_string vd3, test suite:33:check of_string vd2.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:35:candlestick to_string, test suite:34:check of_string vd3.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:35:candlestick to_string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:35:candlestick to_string, test suite:34:check of_string vd3.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:34:check of_string vd3 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:35:candlestick to_string, test suite:34:check of_string vd3.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:34:check of_string vd3.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:35:candlestick to_string, test suite:34:check of_string vd3.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:36:candlestick eod change (profit), test suite:35:candlestick to_string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:36:candlestick eod change (profit).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:36:candlestick eod change (profit), test suite:35:candlestick to_string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:35:candlestick to_string is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:36:candlestick eod change (profit), test suite:35:candlestick to_string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:35:candlestick to_string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:36:candlestick eod change (profit), test suite:35:candlestick to_string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:37:candlestick eod change (loss), test suite:36:candlestick eod change (profit).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:37:candlestick eod change (loss).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:37:candlestick eod change (loss), test suite:36:candlestick eod change (profit).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:36:candlestick eod change (profit) is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:37:candlestick eod change (loss), test suite:36:candlestick eod change (profit).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:36:candlestick eod change (profit).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:37:candlestick eod change (loss), test suite:36:candlestick eod change (profit).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:38:candlestick eod change (even), test suite:37:candlestick eod change (loss).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:38:candlestick eod change (even).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:38:candlestick eod change (even), test suite:37:candlestick eod change (loss).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:37:candlestick eod change (loss) is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:38:candlestick eod change (even), test suite:37:candlestick eod change (loss).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:37:candlestick eod change (loss).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:38:candlestick eod change (even), test suite:37:candlestick eod change (loss).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:39:candlestick color (even), test suite:38:candlestick eod change (even).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:39:candlestick color (even).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:39:candlestick color (even), test suite:38:candlestick eod change (even).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:38:candlestick eod change (even) is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:39:candlestick color (even), test suite:38:candlestick eod change (even).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:38:candlestick eod change (even).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:39:candlestick color (even), test suite:38:candlestick eod change (even).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:40:candlestick color (loss), test suite:39:candlestick color (even).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:39:candlestick color (even) is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:40:candlestick color (loss).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:40:candlestick color (loss), test suite:39:candlestick color (even).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:39:candlestick color (even).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:40:candlestick color (loss), test suite:39:candlestick color (even).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:40:candlestick color (loss) is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:41:candlestick color (profit), test suite:40:candlestick color (loss).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:40:candlestick color (loss).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:41:candlestick color (profit), test suite:40:candlestick color (loss).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:42:csv to stock, test suite:41:candlestick color (profit).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:41:candlestick color (profit).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:42:csv to stock.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:42:csv to stock, test suite:41:candlestick color (profit).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:42:csv to stock is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:42:csv to stock, test suite:41:candlestick color (profit).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:42:csv to stock.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:42:csv to stock, test suite:41:candlestick color (profit).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:43:csv to stock/to_string, test suite:41:candlestick color (profit).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:43:csv to stock/to_string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:43:csv to stock/to_string, test suite:41:candlestick color (profit).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:41:candlestick color (profit) is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:43:csv to stock/to_string, test suite:41:candlestick color (profit).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:41:candlestick color (profit).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:43:csv to stock/to_string, test suite:41:candlestick color (profit).
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:44:test make_asset, test suite:43:csv to stock/to_string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:43:csv to stock/to_string is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:44:test make_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:44:test make_asset, test suite:43:csv to stock/to_string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:43:csv to stock/to_string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:44:test make_asset, test suite:43:csv to stock/to_string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:45:add_asset, test suite:44:test make_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:45:add_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:45:add_asset, test suite:44:test make_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:44:test make_asset is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:45:add_asset, test suite:44:test make_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:44:test make_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:45:add_asset, test suite:44:test make_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:46:remove_asset, test suite:45:add_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:45:add_asset is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:46:remove_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:46:remove_asset, test suite:45:add_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:45:add_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:46:remove_asset, test suite:45:add_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:47:update_asset_quantity, test suite:46:remove_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:47:update_asset_quantity.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:47:update_asset_quantity, test suite:46:remove_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:46:remove_asset is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:47:update_asset_quantity, test suite:46:remove_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:46:remove_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:47:update_asset_quantity, test suite:46:remove_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:48:add_non_existent_asset, test suite:47:update_asset_quantity.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:48:add_non_existent_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:48:add_non_existent_asset, test suite:47:update_asset_quantity.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:47:update_asset_quantity is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:48:add_non_existent_asset is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:48:add_non_existent_asset, test suite:47:update_asset_quantity.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:47:update_asset_quantity.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:48:add_non_existent_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:48:add_non_existent_asset, test suite:47:update_asset_quantity.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:50:remove_non_existent_asset_non_empty_portfolio, test suite:49:remove_non_existent_asset_empty_portfolio.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:49:remove_non_existent_asset_empty_portfolio.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:50:remove_non_existent_asset_non_empty_portfolio.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:50:remove_non_existent_asset_non_empty_portfolio, test suite:49:remove_non_existent_asset_empty_portfolio.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:50:remove_non_existent_asset_non_empty_portfolio is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:50:remove_non_existent_asset_non_empty_portfolio, test suite:49:remove_non_existent_asset_empty_portfolio.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:50:remove_non_existent_asset_non_empty_portfolio.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:50:remove_non_existent_asset_non_empty_portfolio, test suite:49:remove_non_existent_asset_empty_portfolio.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:51:update_quantity_non_existent_asset, test suite:49:remove_non_existent_asset_empty_portfolio.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:51:update_quantity_non_existent_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:51:update_quantity_non_existent_asset, test suite:49:remove_non_existent_asset_empty_portfolio.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:49:remove_non_existent_asset_empty_portfolio is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:51:update_quantity_non_existent_asset, test suite:49:remove_non_existent_asset_empty_portfolio.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:49:remove_non_existent_asset_empty_portfolio.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:51:update_quantity_non_existent_asset, test suite:49:remove_non_existent_asset_empty_portfolio.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:52:add_non_existent_asset, test suite:51:update_quantity_non_existent_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:51:update_quantity_non_existent_asset is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:52:add_non_existent_asset, test suite:51:update_quantity_non_existent_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:51:update_quantity_non_existent_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:52:add_non_existent_asset, test suite:51:update_quantity_non_existent_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:52:add_non_existent_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:53:remove_non_existent_asset_empty_portfolio, test suite:52:add_non_existent_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:53:remove_non_existent_asset_empty_portfolio.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:53:remove_non_existent_asset_empty_portfolio, test suite:52:add_non_existent_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:53:remove_non_existent_asset_empty_portfolio is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:53:remove_non_existent_asset_empty_portfolio, test suite:52:add_non_existent_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:53:remove_non_existent_asset_empty_portfolio.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:53:remove_non_existent_asset_empty_portfolio, test suite:52:add_non_existent_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:54:remove_non_existent_asset_non_empty_portfolio, test suite:52:add_non_existent_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:54:remove_non_existent_asset_non_empty_portfolio.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:54:remove_non_existent_asset_non_empty_portfolio, test suite:52:add_non_existent_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:52:add_non_existent_asset is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:54:remove_non_existent_asset_non_empty_portfolio, test suite:52:add_non_existent_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:52:add_non_existent_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:54:remove_non_existent_asset_non_empty_portfolio, test suite:52:add_non_existent_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:55:update_quantity_non_existent_asset, test suite:54:remove_non_existent_asset_non_empty_portfolio.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:55:update_quantity_non_existent_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:55:update_quantity_non_existent_asset, test suite:54:remove_non_existent_asset_non_empty_portfolio.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:54:remove_non_existent_asset_non_empty_portfolio is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:55:update_quantity_non_existent_asset, test suite:54:remove_non_existent_asset_non_empty_portfolio.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:54:remove_non_existent_asset_non_empty_portfolio.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:55:update_quantity_non_existent_asset, test suite:54:remove_non_existent_asset_non_empty_portfolio.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:55:update_quantity_non_existent_asset is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:56:asset_to_string, test suite:55:update_quantity_non_existent_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:55:update_quantity_non_existent_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:56:asset_to_string, test suite:55:update_quantity_non_existent_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:57:portfolio_to_string_single_asset, test suite:56:asset_to_string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:56:asset_to_string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:57:portfolio_to_string_single_asset, test suite:56:asset_to_string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:57:portfolio_to_string_single_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:57:portfolio_to_string_single_asset, test suite:56:asset_to_string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:57:portfolio_to_string_single_asset is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:57:portfolio_to_string_single_asset, test suite:56:asset_to_string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:57:portfolio_to_string_single_asset.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:57:portfolio_to_string_single_asset, test suite:56:asset_to_string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:58:portfolio_to_string_multiple_assets, test suite:56:asset_to_string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Start test test suite:58:portfolio_to_string_multiple_assets.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:58:portfolio_to_string_multiple_assets, test suite:56:asset_to_string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:56:asset_to_string is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:58:portfolio_to_string_multiple_assets, test suite:56:asset_to_string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:56:asset_to_string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:58:portfolio_to_string_multiple_assets, test suite:56:asset_to_string.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Still 2 tests running : test suite:59:testing portfolio funcs, test suite:58:portfolio_to_string_multiple_assets.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:59:testing portfolio funcs, test suite:58:portfolio_to_string_multiple_assets.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Start test test suite:59:testing portfolio funcs.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Still 2 tests running : test suite:59:testing portfolio funcs, test suite:58:portfolio_to_string_multiple_assets.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:59:testing portfolio funcs, test suite:58:portfolio_to_string_multiple_assets.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: Test test suite:59:testing portfolio funcs is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Still 2 tests running : test suite:59:testing portfolio funcs, test suite:58:portfolio_to_string_multiple_assets.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:59:testing portfolio funcs, test suite:58:portfolio_to_string_multiple_assets.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#02 I: End test test suite:59:testing portfolio funcs.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Still 2 tests running : test suite:59:testing portfolio funcs, test suite:58:portfolio_to_string_multiple_assets.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 2 tests running: test suite:59:testing portfolio funcs, test suite:58:portfolio_to_string_multiple_assets.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Still 1 tests running : test suite:58:portfolio_to_string_multiple_assets.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 1 tests running: test suite:58:portfolio_to_string_multiple_assets.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: Test test suite:58:portfolio_to_string_multiple_assets is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Still 1 tests running : test suite:58:portfolio_to_string_multiple_assets.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 1 tests running: test suite:58:portfolio_to_string_multiple_assets.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#01 I: End test test suite:58:portfolio_to_string_multiple_assets.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Still 1 tests running : test suite:58:portfolio_to_string_multiple_assets.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 1 tests running: test suite:58:portfolio_to_string_multiple_assets.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: 0 tests running: .
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Worker dhcp-vl2041-12730.eduroam.cornell.edu#02 has ended.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Worker dhcp-vl2041-12730.eduroam.cornell.edu#01 has ended.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Used 2 worker during test execution.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Run 29 tests with shard dhcp-vl2041-12730.eduroam.cornell.edu#02.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Run 31 tests with shard dhcp-vl2041-12730.eduroam.cornell.edu#01.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Check health of shard dhcp-vl2041-12730.eduroam.cornell.edu#02, 4 times.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Check health of shard dhcp-vl2041-12730.eduroam.cornell.edu#01, 1 times.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: ==============
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Summary:
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:58:portfolio_to_string_multiple_assets is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:59:testing portfolio funcs is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:56:asset_to_string is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:57:portfolio_to_string_single_asset is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:55:update_quantity_non_existent_asset is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:54:remove_non_existent_asset_non_empty_portfolio is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:52:add_non_existent_asset is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:53:remove_non_existent_asset_empty_portfolio is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:51:update_quantity_non_existent_asset is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:49:remove_non_existent_asset_empty_portfolio is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:50:remove_non_existent_asset_non_empty_portfolio is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:48:add_non_existent_asset is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:47:update_asset_quantity is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:46:remove_asset is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:45:add_asset is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:44:test make_asset is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:43:csv to stock/to_string is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:41:candlestick color (profit) is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:42:csv to stock is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:40:candlestick color (loss) is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:39:candlestick color (even) is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:38:candlestick eod change (even) is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:37:candlestick eod change (loss) is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:36:candlestick eod change (profit) is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:35:candlestick to_string is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:34:check of_string vd3 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:33:check of_string vd2 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:32:check of_string vd1 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:30:check to_string - invalid-date leap is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:31:check to_string - invalid-date  is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:29:check to_string - invalid-date is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:28:check to_string - invalid-date is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:27:check to_string - invalid-date is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:26:check to_string - invalid-date is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:25:check to_string leap- 2/29/2020 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:23:check pp_date - 2/28/2022 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:24:check pp_date- 12/31/2021 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:22:check to_string - 1/2/2023 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:21:check pp_date - invalid-date  is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:20:check pp_date - invalid-date is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:19:check pp_date - invalid-date is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:18:check pp_date - invalid-date is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:17:check pp_date - invalid-date is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:16:check pp_date - invalid-date leap is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:15:check pp_date leap- 2/29/2020 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:14:check pp_date- 12/31/2021 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:13:check pp_date - 2/28/2022 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:11:dates to string is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:12:check pp_date - 1/2/2023 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:10:compare dates equal is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:9:compare dates greater than is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:8:compare dates less than is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:7:check valid invalid-date leap- 2/29/2022 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:6:check valid date leap- 2/29/2020 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:4:check valid date - 13/20/2022 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:5:check valid date - 5/31/2001 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:3:check invalid date - 2/31/2022 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:1:check valid date - 2/28/2022 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:2:check valid date - 5/31/2023 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Test test suite:0:check valid date - 1/30/2022 is successful.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Ran: 60 tests in: 0.14 seconds.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Cases: 60.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Tried: 60.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Errors: 0.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Failures: 0.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Skip: 0.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Todo: 0.
+2023-12-09T02:13:54+00:00 dhcp-vl2041-12730.eduroam.cornell.edu#00 I: Timeout: 0.

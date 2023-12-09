@@ -14,6 +14,7 @@ module Date = struct
       | 9 -> short d.day
       | 12 -> long d.day
       | 10 -> long d.day
+      | 8 -> long d.day
       | i -> if (i mod 2 = 1) then long d.day else short d.day in
     match d.year with
     |x -> if (x < 2000)||(x > 2023) then false else check_helper d
@@ -116,6 +117,9 @@ let yf_to_stock  (ticker: string) (csv : string list list): stock =
   | h::t -> yf_helper t
   | [] -> yf_helper [] in 
   (ticker, candle)
+let datacreation (csv_name:string) = 
+    let csv_data = Csv.load ("/Users/pepebaselga/cs3110/PortfolioManager/"^csv_name^".csv") in
+    yf_to_stock csv_name csv_data
 let rec to_string_helper (candle : (Date.date * Candlestick.cs) list) = 
     match candle with
     | [] -> ""
@@ -139,15 +143,15 @@ let  find_date (stock : stock) (day1 : Date.date) =
 
   let rec get_dollar_diff (stock : stock) day1 day2 =
   let _ = assert (Date.check_date day1);
-          assert (Date.check_date day1);
-          assert ((Date.compare day1 day2) = LT);
-  in
+          assert (Date.check_date day2); 
+          assert ((Date.compare day1 day2) = LT); 
+  in 
   let _,d1 = find_date stock day1 in 
   let _,d2 = find_date stock day2 in
   d2.closep -. d1.closep
   let rec get_percent_diff (stock : stock) day1 day2 =
     let _ = assert (Date.check_date day1);
-            assert (Date.check_date day1);
+            assert (Date.check_date day2);
             assert ((Date.compare day1 day2) = LT);
     in
     let _,d1 = find_date stock day1 in 
@@ -155,3 +159,4 @@ let  find_date (stock : stock) (day1 : Date.date) =
     (d2.closep -. d1.closep) /. d1.closep
   
 end
+

@@ -184,6 +184,7 @@ let date_tests =
       assert_equal (Stock.to_string(Stock.yf_to_stock "APPL" csv2)) ("APPL: "^(csv2str)) ~printer: (fun x -> x));
   
     ]
+
 let portfolio_tests =
   [
    (* Test for add_asset function *)
@@ -268,10 +269,23 @@ let portfolio_tests =
     let asset2 = Asset.make_asset "Asset Two" 200.0 100.0 (Date.make_date 2 1 2023) "Health" in
     let test_portfolio = [asset1; asset2] in
     let expected_string = "[Name: Asset One, Quantity: 100.00, Purchase Price: 50.00, Date Purchased: 1/1/2023, Sector: Tech], [Name: Asset Two, Quantity: 200.00, Purchase Price: 100.00, Date Purchased: 2/1/2023, Sector: Health]" in
-    assert_equal expected_string (Asset.portfolio_to_string test_portfolio) ~printer:(fun x -> x)
+    assert_equal expected_string (Asset.portfolio_to_string test_portfolio) ~printer:(fun x -> x);
+    assert_equal (Stock.to_string (Stock.datacreation "PEP")) (Stock.to_string (Stock.datacreation "PEP")) ~printer: (fun x -> x) 
   );
+  "testing portfolio funcs">:: (fun _ -> 
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a2 = (Asset.make_asset "NYT" 1.0 33.0 (Date.make_date 12 2 2023) "News") in
+    let p2 = (Asset.add_asset p1 a1) in
+    let finalp = Asset.add_asset p2 a2 in
+    assert_equal (string_of_float (Asset.best_dollar_asset finalp (Date.make_date 12 8 2023)))
+    (string_of_float (Asset.best_dollar_asset finalp (Date.make_date 12 8 2023))) ~printer: (fun x -> x);
+    assert_equal 2.0 (Asset.particular_stock_quantity finalp "PEP" (Date.make_date 12 8 2023)) ~printer: (fun x -> string_of_float x);
+    );
   ]
 let suite =
   "test suite"
   >::: List.flatten [date_tests; candle_tests; stock_tests; portfolio_tests;]
 let () = run_test_tt_main suite
+
+

@@ -1,0 +1,30 @@
+# dune exec test/test.exe
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Shared cache location: /Users/pepebaselga/.cache/dune/db
+# Workspace root: /Users/pepebaselga/cs3110/PortfolioManager
+# Auto-detected concurrency: 8
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; installed_env =
+#      map
+#        { "INSIDE_DUNE" :
+#            "/Users/pepebaselga/cs3110/PortfolioManager/_build/default"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; instrument_with = []
+#  }
+$ /Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlc.opt -config > /var/folders/d1/7ctmxfds3slf8bgcsq25q0bh0000gn/T/dune_a827f7_output
+$ (cd _build/default && /Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamldep.opt -modules -impl lib/module2.ml) > _build/default/lib/.PortfolioManager.objs/portfolioManager__Module2.impl.d
+$ (cd _build/default && /Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlc.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66..70 -warn-error -a+31 -g -bin-annot -I lib/.PortfolioManager.objs/byte -I /Users/pepebaselga/.opam/cs3110-2023fa/lib/bytes -I /Users/pepebaselga/.opam/cs3110-2023fa/lib/csv -I /Users/pepebaselga/.opam/cs3110-2023fa/lib/ocaml/str -no-alias-deps -opaque -open PortfolioManager -o lib/.PortfolioManager.objs/byte/portfolioManager__Module2.cmo -c -impl lib/module2.ml)
+$ (cd _build/default && /Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlc.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66..70 -warn-error -a+31 -g -bin-annot -I test/.test.eobjs/byte -I /Users/pepebaselga/.opam/cs3110-2023fa/lib/bytes -I /Users/pepebaselga/.opam/cs3110-2023fa/lib/csv -I /Users/pepebaselga/.opam/cs3110-2023fa/lib/ocaml/str -I /Users/pepebaselga/.opam/cs3110-2023fa/lib/ocaml/unix -I /Users/pepebaselga/.opam/cs3110-2023fa/lib/ounit2 -I /Users/pepebaselga/.opam/cs3110-2023fa/lib/ounit2/advanced -I /Users/pepebaselga/.opam/cs3110-2023fa/lib/seq -I /Users/pepebaselga/.opam/cs3110-2023fa/lib/stdlib-shims -I lib/.PortfolioManager.objs/byte -no-alias-deps -opaque -o test/.test.eobjs/byte/dune__exe__Test.cmi -c -intf test/test.mli)
+$ (cd _build/default && /Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66..70 -warn-error -a+31 -g -I lib/.PortfolioManager.objs/byte -I lib/.PortfolioManager.objs/native -I /Users/pepebaselga/.opam/cs3110-2023fa/lib/bytes -I /Users/pepebaselga/.opam/cs3110-2023fa/lib/csv -I /Users/pepebaselga/.opam/cs3110-2023fa/lib/ocaml/str -intf-suffix .ml -no-alias-deps -opaque -open PortfolioManager -o lib/.PortfolioManager.objs/native/portfolioManager__Module2.cmx -c -impl lib/module2.ml)
+$ (cd _build/default && /Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66..70 -warn-error -a+31 -g -I test/.test.eobjs/byte -I test/.test.eobjs/native -I /Users/pepebaselga/.opam/cs3110-2023fa/lib/bytes -I /Users/pepebaselga/.opam/cs3110-2023fa/lib/csv -I /Users/pepebaselga/.opam/cs3110-2023fa/lib/ocaml/str -I /Users/pepebaselga/.opam/cs3110-2023fa/lib/ocaml/unix -I /Users/pepebaselga/.opam/cs3110-2023fa/lib/ounit2 -I /Users/pepebaselga/.opam/cs3110-2023fa/lib/ounit2/advanced -I /Users/pepebaselga/.opam/cs3110-2023fa/lib/seq -I /Users/pepebaselga/.opam/cs3110-2023fa/lib/stdlib-shims -I lib/.PortfolioManager.objs/byte -I lib/.PortfolioManager.objs/native -intf-suffix .ml -no-alias-deps -opaque -o test/.test.eobjs/native/dune__exe__Test.cmx -c -impl test/test.ml)
+$ (cd _build/default && /Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66..70 -warn-error -a+31 -g -a -o lib/PortfolioManager.cmxa lib/.PortfolioManager.objs/native/portfolioManager.cmx lib/.PortfolioManager.objs/native/portfolioManager__Module4.cmx lib/.PortfolioManager.objs/native/portfolioManager__Module3.cmx lib/.PortfolioManager.objs/native/portfolioManager__Module1.cmx lib/.PortfolioManager.objs/native/portfolioManager__Module2.cmx)
+$ (cd _build/default && /Users/pepebaselga/.opam/cs3110-2023fa/bin/ocamlopt.opt -w +a-4-6-7-9-27-29-30-32..42-44-45-48-50-60-66..70 -warn-error -a+31 -g -o test/test.exe /Users/pepebaselga/.opam/cs3110-2023fa/lib/ocaml/str/str.cmxa /Users/pepebaselga/.opam/cs3110-2023fa/lib/csv/csv.cmxa lib/PortfolioManager.cmxa /Users/pepebaselga/.opam/cs3110-2023fa/lib/ocaml/unix/unix.cmxa /Users/pepebaselga/.opam/cs3110-2023fa/lib/stdlib-shims/stdlib_shims.cmxa /Users/pepebaselga/.opam/cs3110-2023fa/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/pepebaselga/.opam/cs3110-2023fa/lib/ounit2/oUnit.cmxa test/.test.eobjs/native/dune__exe__Test.cmx)
