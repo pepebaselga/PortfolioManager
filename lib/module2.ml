@@ -75,39 +75,43 @@ module Asset = struct
   
   let best_dollar_asset (portfolio: portfolio) (day: date) = 
     let first,first_bought = find_asset (List.nth portfolio 0).name, (List.nth portfolio 0).date_purchased in 
-    let max = ref ((Stock.get_dollar_diff first ) first_bought day) in 
+    let max = ref ((List.nth portfolio 0).name, (Stock.get_dollar_diff first ) first_bought day) in 
     List.iter (fun x -> 
       let stock =  find_asset (x.name) in 
       let dollar_dif = Stock.get_dollar_diff stock x.date_purchased day in
-      (if dollar_dif > !max then (max := dollar_dif) else ())
+      let name,dv = !max in
+      (if dollar_dif > dv then (max := (name,dv)) else ())
       ) portfolio;!max
       
 
   let best_percent_asset (portfolio: portfolio) (day: date) = 
     let first,first_bought = find_asset (List.nth portfolio 0).name, (List.nth portfolio 0).date_purchased in 
-    let max = ref ((Stock.get_percent_diff first ) first_bought day) in
+    let max = ref ((List.nth portfolio 0).name, (Stock.get_percent_diff first ) first_bought day) in 
     List.iter (fun x -> 
       let stock =  find_asset (x.name) in 
       let percent_dif = Stock.get_percent_diff stock x.date_purchased day in
-      (if percent_dif > !max then (max := percent_dif) else ())
+      let name,pv = !max in
+      (if percent_dif > pv then (max := (name,pv)) else ())
       ) portfolio;!max
 
   let worst_dollar_asset (portfolio: portfolio) (day: date) = 
     let first,first_bought = find_asset (List.nth portfolio 0).name, (List.nth portfolio 0).date_purchased in 
-    let min = ref ((Stock.get_percent_diff first ) first_bought day) in
+    let min = ref ((List.nth portfolio 0).name, (Stock.get_dollar_diff first ) first_bought day) in 
     List.iter (fun x -> 
       let stock =  find_asset (x.name) in 
       let dollar_dif = Stock.get_dollar_diff stock x.date_purchased day in
-      (if dollar_dif < !min then (min := dollar_dif) else ())
+      let name,dv = !min in
+      (if dollar_dif < dv then (min := (name,dv)) else ())
       ) portfolio;!min
 
   let worst_percent_asset (portfolio: portfolio) (day: date) = 
     let first,first_bought = find_asset (List.nth portfolio 0).name, (List.nth portfolio 0).date_purchased in 
-    let min = ref ((Stock.get_percent_diff first ) first_bought day) in
+    let min = ref ((List.nth portfolio 0).name, (Stock.get_percent_diff first ) first_bought day) in 
     List.iter (fun x -> 
       let stock =  find_asset (x.name) in 
       let dollar_dif = Stock.get_dollar_diff stock x.date_purchased day in
-      (if dollar_dif < !min then (min := dollar_dif) else ())
+      let name,pv = !min in
+      (if dollar_dif < pv then (min := (name,pv)) else ())
       ) portfolio;!min
   let total_portfolio_value (portfolio: portfolio) (day: date) = 
     let count = ref 0.0 in 
@@ -204,7 +208,8 @@ module Asset = struct
     let count = ref 0.0 in 
     List.iter (fun x -> if x.name = asset_name then 
     let stock =  find_asset (x.name) in 
-    let dollar = (x.quantity *. Stock.get_dollar_diff stock x.date_purchased day) in 
+    let _,eod_value = Stock.find_date stock day in
+    let dollar = (x.quantity *.eod_value.closep) in 
     count := dollar +. !count) portfolio;
     !count
   
