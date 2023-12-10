@@ -19,8 +19,8 @@ finalcheck:
 	@bash check.sh final
 
 zip:
-	rm -f rml.zip
-	zip -r rml.zip . -x@exclude.lst
+	rm -f PortfolioManager.zip
+	zip -r PortfolioManager.zip . -x@exclude.lst
 
 clean:
 	dune clean
