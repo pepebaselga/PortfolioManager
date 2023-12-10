@@ -1,13 +1,11 @@
 open Module1
+open Module3
 open Date 
 
 
 
 module Asset = struct
-  let stock_data: Stock.stock list = [
-    Stock.datacreation "NYT"; 
-    Stock.datacreation "ABNB";  Stock.datacreation "PEP"
-  ] 
+  let stock_data: Stock.stock list = Index.load_data 
 
   type asset = {
     name: string;              (* Asset name *)
@@ -48,8 +46,8 @@ module Asset = struct
   let add_asset (portfolio : portfolio) (asset : asset) : portfolio =
     asset :: portfolio
   (* Remove an asset from the portfolio by its name (could potentially make longer by rewriting filter for a portfolio) *)
-  let remove_asset (portfolio : portfolio) (asset_name : string) : portfolio =
-    List.filter (fun a -> a.name <> asset_name) portfolio
+  let remove_asset (portfolio : portfolio) (asset_name : string) (day_bought: date) : portfolio =
+    List.filter (fun a -> a.name <> asset_name || a.date_purchased <> day_bought) portfolio
   (* Update the quantity of an asset in the portfolio *)
   let make_asset (name : string) (quantity: float) (purchase_price : float) (date_purchased : date) (sector : string) : asset =
     { name = name;

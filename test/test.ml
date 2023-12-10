@@ -1,6 +1,7 @@
 open OUnit2
 open PortfolioManager
 open Module1
+open Module3
 open Module2
 
 let vd1 = Date.make_date 1 2 2023
@@ -173,8 +174,6 @@ let date_tests =
     assert_equal (red_cs) (Candlestick.get_color cs2));
     ("candlestick color (profit)" >:: fun _ ->
     assert_equal (green_cs) (Candlestick.get_color cs1));
-    
-        
   ]
   let stock_tests =
     [
@@ -182,12 +181,10 @@ let date_tests =
       assert_equal (Stock.yf_to_stock "APPL" csv1a) (Stock.yf_to_stock "APPL" csv1b) ~printer: (fun x -> Stock.to_string x));
       ("csv to stock/to_string" >:: fun _ ->
       assert_equal (Stock.to_string(Stock.yf_to_stock "APPL" csv2)) ("APPL: "^(csv2str)) ~printer: (fun x -> x));
-  
     ]
 
 let portfolio_tests =
   [
-   (* Test for add_asset function *)
    "test make_asset" >:: (fun _ ->
     let example = Asset.make_asset "Example Company" 100.0 50.0 (Date.make_date 1 1 2023) "Technology" in
     assert_equal Asset.example_asset example ~printer:Asset.asset_to_string
@@ -197,91 +194,348 @@ let portfolio_tests =
     let portfolio = Asset.add_asset [] new_asset in
     assert_equal [new_asset] portfolio ~printer:Asset.portfolio_to_string
   );
-  (* Test for remove_asset function *)
   "remove_asset" >:: (fun _ ->
-    let portfolio = Asset.remove_asset [Asset.example_asset] "Example Company" in
+    let portfolio = Asset.remove_asset [Asset.example_asset] "Example Company" (Date.make_date 1 1 2023) in
     assert_equal [] portfolio ~printer:Asset.portfolio_to_string
   );
-  (* Test for update_asset_quantity function *)
   "update_asset_quantity" >:: (fun _ ->
     let updated_portfolio = Asset.update_asset_quantity [Asset.example_asset] "Example Company" 200.0 in
     let expected_asset = {Asset.example_asset with quantity = 200.0} in
     assert_equal [expected_asset] updated_portfolio ~printer:Asset.portfolio_to_string
   );
-      (* Test adding a non-existent asset *)
   "add_non_existent_asset" >:: (fun _ ->
     let non_existent_asset = Asset.make_asset "Non-existent" 50.0 100.0 (Date.make_date 1 1 2022) "Unknown" in
     let portfolio = Asset.add_asset [] non_existent_asset in
     assert_equal [non_existent_asset] portfolio ~printer:Asset.portfolio_to_string
   );
-  (* Test removing a non-existent asset from an empty portfolio *)
   "remove_non_existent_asset_empty_portfolio" >:: (fun _ ->
-    let portfolio = Asset.remove_asset [] "Non-existent" in
+    let portfolio = Asset.remove_asset [] "Non-existent" (Date.make_date 1 1 2023) in
     assert_equal [] portfolio ~printer:Asset.portfolio_to_string
   );
-  (* Test removing a non-existent asset from a non-empty portfolio *)
   "remove_non_existent_asset_non_empty_portfolio" >:: (fun _ ->
-    let portfolio = Asset.remove_asset [Asset.example_asset] "Non-existent" in
+    let portfolio = Asset.remove_asset [Asset.example_asset] "Non-existent"  (Date.make_date 1 1 2023) in
     assert_equal [Asset.example_asset] portfolio ~printer:Asset.portfolio_to_string
   );
-  (* Test updating the quantity of a non-existent asset *)
   "update_quantity_non_existent_asset" >:: (fun _ ->
     let portfolio = Asset.update_asset_quantity [Asset.example_asset] "Non-existent" 300.0 in
     assert_equal [Asset.example_asset] portfolio ~printer:Asset.portfolio_to_string
   );
-  (* Test adding a non-existent asset *)
-  "add_non_existent_asset" >:: (fun _ ->
-    let non_existent_asset = Asset.make_asset "Non-existent" 50.0 100.0 (Date.make_date 1 1 2022) "Unknown" in
-    let portfolio = Asset.add_asset [] non_existent_asset in
-    assert_equal [non_existent_asset] portfolio ~printer:Asset.portfolio_to_string
-  );
-    (* Test removing a non-existent asset from an empty portfolio *)
-  "remove_non_existent_asset_empty_portfolio" >:: (fun _ ->
-    let portfolio = Asset.remove_asset [] "Non-existent" in
-    assert_equal [] portfolio ~printer:Asset.portfolio_to_string
-  );
-    (* Test removing a non-existent asset from a non-empty portfolio *)
-  "remove_non_existent_asset_non_empty_portfolio" >:: (fun _ ->
-    let portfolio = Asset.remove_asset [Asset.example_asset] "Non-existent" in
-    assert_equal [Asset.example_asset] portfolio ~printer:Asset.portfolio_to_string
-  );
-    (* Test updating the quantity of a non-existent asset *)
-  "update_quantity_non_existent_asset" >:: (fun _ ->
-    let portfolio = Asset.update_asset_quantity [Asset.example_asset] "Non-existent" 300.0 in
-    assert_equal [Asset.example_asset] portfolio ~printer:Asset.portfolio_to_string
-  );
-  (* Test asset_to_string function *)
   "asset_to_string" >:: (fun _ ->
     let test_asset = Asset.make_asset "Test Asset" 150.0 75.0 (Date.make_date 1 1 2023) "Finance" in
     let expected_string = "[Name: Test Asset, Quantity: 150.00, Purchase Price: 75.00, Date Purchased: 1/1/2023, Sector: Finance]" in
     assert_equal expected_string (Asset.asset_to_string test_asset) ~printer:(fun x -> x)
   );
-  (* Test portfolio_to_string function with a single asset *)
   "portfolio_to_string_single_asset" >:: (fun _ ->
     let test_asset = Asset.make_asset "Test Asset" 150.0 75.0 (Date.make_date 1 1 2023) "Finance" in
     let test_portfolio = [test_asset] in
     let expected_string = "[Name: Test Asset, Quantity: 150.00, Purchase Price: 75.00, Date Purchased: 1/1/2023, Sector: Finance]" in
     assert_equal expected_string (Asset.portfolio_to_string test_portfolio) ~printer:(fun x -> x)
   );
-  (* Test portfolio_to_string function with multiple assets *)
   "portfolio_to_string_multiple_assets" >:: (fun _ ->
     let asset1 = Asset.make_asset "Asset One" 100.0 50.0 (Date.make_date 1 1 2023) "Tech" in
     let asset2 = Asset.make_asset "Asset Two" 200.0 100.0 (Date.make_date 2 1 2023) "Health" in
     let test_portfolio = [asset1; asset2] in
     let expected_string = "[Name: Asset One, Quantity: 100.00, Purchase Price: 50.00, Date Purchased: 1/1/2023, Sector: Tech], [Name: Asset Two, Quantity: 200.00, Purchase Price: 100.00, Date Purchased: 2/1/2023, Sector: Health]" in
     assert_equal expected_string (Asset.portfolio_to_string test_portfolio) ~printer:(fun x -> x);
-    assert_equal (Stock.to_string (Stock.datacreation "PEP")) (Stock.to_string (Stock.datacreation "PEP")) ~printer: (fun x -> x) 
+    assert_equal (Stock.to_string (Index.load_specific "PEP.csv")) (Stock.to_string (Index.load_specific "PEP.csv")) ~printer: (fun x -> x) 
   );
   "testing portfolio funcs">:: (fun _ -> 
     let (p1: Asset.portfolio) = [] in
-    let a1 = Asset.make_asset "PEP" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
-    let a2 = (Asset.make_asset "NYT" 1.0 33.0 (Date.make_date 12 2 2023) "News") in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a2 = (Asset.make_asset "NYT.csv" 1.0 33.0 (Date.make_date 12 2 2023) "News") in
     let p2 = (Asset.add_asset p1 a1) in
     let finalp = Asset.add_asset p2 a2 in
     assert_equal (string_of_float (Asset.best_dollar_asset finalp (Date.make_date 12 8 2023)))
     (string_of_float (Asset.best_dollar_asset finalp (Date.make_date 12 8 2023))) ~printer: (fun x -> x);
-    assert_equal 2.0 (Asset.particular_stock_quantity finalp "PEP" (Date.make_date 12 8 2023)) ~printer: (fun x -> string_of_float x);
+    assert_equal 2.0 (Asset.particular_stock_quantity finalp "PEP.csv" (Date.make_date 12 8 2023)) ~printer: (fun x -> string_of_float x);
     );
+  "testing best_dollar_asset" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a2 = (Asset.make_asset "NYT.csv" 1.0 33.0 (Date.make_date 12 2 2023) "News") in
+    let p2 = (Asset.add_asset p1 a1) in
+    let finalp = Asset.add_asset p2 a2 in
+    assert_equal (string_of_float (Asset.best_dollar_asset finalp (Date.make_date 12 8 2023)))
+    (string_of_float (Asset.best_dollar_asset finalp (Date.make_date 12 8 2023))) ~printer: (fun x -> x);
+    assert_equal 2.0 (Asset.particular_stock_quantity finalp "PEP.csv" (Date.make_date 12 8 2023)) ~printer: (fun x -> string_of_float x);
+  );
+
+  "testing worst_dollar_asset" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a2 = Asset.make_asset "PEP.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a3 = Asset.make_asset "NYT.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    let p3 = (Asset.add_asset p2 a2) in
+    let finalp = Asset.add_asset p3 a3 in
+    assert_equal (string_of_float (Asset.worst_dollar_asset finalp (Date.make_date 12 8 2023)))
+    (string_of_float (Asset.worst_dollar_asset finalp (Date.make_date 12 8 2023))) ~printer: (fun x -> x);
+    assert_equal 1.0 (Asset.particular_stock_quantity finalp "NYT.csv" (Date.make_date 12 8 2023)) ~printer: (fun x -> string_of_float x);
+  );
+
+  "testing worst_percent_asset" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a2 = Asset.make_asset "PEP.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a3 = Asset.make_asset "NYT.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    let p3 = (Asset.add_asset p2 a2) in
+    let finalp = Asset.add_asset p3 a3 in
+    assert_equal (string_of_float (Asset.worst_percent_asset finalp (Date.make_date 12 8 2023)))
+    (string_of_float (Asset.worst_percent_asset finalp (Date.make_date 12 5 2023))) ~printer: (fun x -> x);
+    assert_equal 1.0 (Asset.particular_stock_quantity finalp "NYT.csv" (Date.make_date 12 8 2023)) ~printer: (fun x -> string_of_float x);
+  );
+  "testing total_portfolio_value multiple values" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a2 = Asset.make_asset "PEP.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a3 = Asset.make_asset "NYT.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    let p3 = (Asset.add_asset p2 a2) in
+    let finalp = Asset.add_asset p3 a3 in
+    assert_equal (string_of_float(Asset.total_portfolio_value finalp (Date.make_date 1 5 2022))) "571.280011" ~printer: (fun x -> x));
+
+  "testing total_portfolio_value 1 value" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    assert_equal (string_of_float(Asset.total_portfolio_value p2 (Date.make_date 1 5 2022))) "358.820008" ~printer: (fun x -> x)
+    
+  );
+  "testing total_dollarc multiple values" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a2 = Asset.make_asset "PEP.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a3 = Asset.make_asset "NYT.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    let p3 = (Asset.add_asset p2 a2) in
+    let finalp = Asset.add_asset p3 a3 in
+    assert_equal (string_of_float(Asset.total_dollarc finalp (Date.make_date 8 5 2023))) "12.860007" ~printer: (fun x -> x));
+
+  "testing total_dollarc 1 value" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    assert_equal (string_of_float(Asset.total_dollarc p2 (Date.make_date 9 5 2023))) "7.380004" ~printer: (fun x -> x)
+    
+  );
+  "testing total_asset_pc multiple values" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a2 = Asset.make_asset "PEP.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a3 = Asset.make_asset "NYT.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    let p3 = (Asset.add_asset p2 a2) in
+    let finalp = Asset.add_asset p3 a3 in
+    assert_equal (string_of_float(Asset.total_asset_pc finalp (Date.make_date 8 5 2023))) "0.0952952471947" ~printer: (fun x -> x));
+
+  "testing total_asset_pc 1 value" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    assert_equal (string_of_float(Asset.total_asset_pc p2 (Date.make_date 9 5 2023))) "0.0205674261063" ~printer: (fun x -> x)
+  );
+  "testing perasset_dollarc multiple values" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a2 = Asset.make_asset "PEP.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a3 = Asset.make_asset "NYT.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    let p3 = (Asset.add_asset p2 a2) in
+    let finalp = Asset.add_asset p3 a3 in
+    assert_equal (string_of_float(List.fold_left(fun sum (_, change) -> sum +. change) 0.0 (Asset.perasset_dollarc finalp (Date.make_date 9 5 2023)))) "12.860007" ~printer: (fun x -> x));
+
+  "testing perasset_dollarc 1 value" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    assert_equal (string_of_float(List.fold_left(fun sum (_, change) -> sum +. change) 0.0 (Asset.perasset_dollarc p2 (Date.make_date 9 5 2023)))) "7.380004" ~printer: (fun x -> x)
+  );
+  "testing perasset_percentc multiple values" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a2 = Asset.make_asset "PEP.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a3 = Asset.make_asset "NYT.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    let p3 = (Asset.add_asset p2 a2) in
+    let finalp = Asset.add_asset p3 a3 in
+    assert_equal (string_of_float(List.fold_left(fun sum (_, change) -> sum +. change) 0.0 (Asset.perasset_percentc finalp (Date.make_date 9 5 2023)))) "0.0952952471947" ~printer: (fun x -> x));
+
+  "testing perasset_percentc 1 value" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    assert_equal (string_of_float(List.fold_left(fun sum (_, change) -> sum +. change) 0.0 (Asset.perasset_percentc p2 (Date.make_date 9 5 2023)))) "0.0205674261063" ~printer: (fun x -> x)
+  );
+  "testing perasset_percentc multiple values" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a2 = Asset.make_asset "PEP.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a3 = Asset.make_asset "NYT.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    let p3 = (Asset.add_asset p2 a2) in
+    let finalp = Asset.add_asset p3 a3 in
+    assert_equal (string_of_float(List.fold_left(fun sum (_, change) -> sum +. change) 0.0 (Asset.perasset_percentc finalp (Date.make_date 9 5 2023)))) "0.0952952471947" ~printer: (fun x -> x));
+  "testing total_asset_quantity multiple values" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a2 = Asset.make_asset "PEP.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a3 = Asset.make_asset "NYT.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    let p3 = (Asset.add_asset p2 a2) in
+    let finalp = Asset.add_asset p3 a3 in
+    assert_equal (string_of_float(List.fold_left(fun sum (_, change) -> sum +. change) 0.0 (Asset.total_asset_quantity finalp))) "4." ~printer: (fun x -> x));
+
+  "testing total_asset_quantity 1 value" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    assert_equal (string_of_float(List.fold_left(fun sum (_, change) -> sum +. change) 0.0 (Asset.total_asset_quantity p2))) "2." ~printer: (fun x -> x));
+    
+  "testing find_list_sectors multiple values" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a2 = Asset.make_asset "PEP.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a3 = Asset.make_asset "NYT.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    let p3 = (Asset.add_asset p2 a2) in
+    let finalp = Asset.add_asset p3 a3 in
+    assert_equal (List.fold_left(fun sum (first, second) -> sum ^ first ^ ": " ^ second ^ "; ") "" (Asset.find_list_sectors finalp)) "PEP.csv: F&B; PEP.csv: F&B; NYT.csv: F&B; " ~printer: (fun x -> x));
+
+  "testing find_list_sectors 1 value" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    assert_equal (List.fold_left(fun sum (first, second) -> sum ^first^ ": " ^ second ^ "; ") "" (Asset.find_list_sectors p2)) "PEP.csv: F&B; " ~printer: (fun x -> x));
+  "testing find_sector_pc" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a2 = Asset.make_asset "PEP.csv" 1.0 177.0 (Date.make_date 1 5 2022) "Tech" in
+    let a3 = Asset.make_asset "NYT.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    let p3 = (Asset.add_asset p2 a2) in
+    let finalp = Asset.add_asset p3 a3 in
+    assert_equal (string_of_float(Asset.find_sector_pc finalp "Tech" (Date.make_date 2 9 2023))) "0.0205674261063" ~printer: (fun x -> x));
+
+  "testing find_sector_pc 1 value" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    assert_equal (string_of_float(Asset.find_sector_pc p2 "F&B" (Date.make_date 5 6 2023))) "0.0205674261063" ~printer: (fun x -> x));
+
+  "testing find_restofsectors_pc" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a2 = Asset.make_asset "PEP.csv" 1.0 177.0 (Date.make_date 1 5 2022) "Tech" in
+    let a3 = Asset.make_asset "NYT.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    let p3 = (Asset.add_asset p2 a2) in
+    let finalp = Asset.add_asset p3 a3 in
+    assert_equal (string_of_float(Asset.find_restofsectors_pc finalp "Tech" (Date.make_date 2 9 2023))) "0.0747278210885" ~printer: (fun x -> x));
+
+  "testing find_restofsectors_pc 1 value" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    assert_equal (string_of_float(Asset.find_restofsectors_pc p2 "F&B" (Date.make_date 5 6 2023))) "0." ~printer: (fun x -> x));
+
+  "testing find_sectors_dc" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a2 = Asset.make_asset "PEP.csv" 1.0 177.0 (Date.make_date 1 5 2022) "Tech" in
+    let a3 = Asset.make_asset "NYT.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    let p3 = (Asset.add_asset p2 a2) in
+    let finalp = Asset.add_asset p3 a3 in
+    assert_equal (string_of_float(Asset.find_sector_dc finalp "Tech" (Date.make_date 2 9 2023))) "3.690002" ~printer: (fun x -> x));
+
+  "testing find_sectors_dc 1 value" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    assert_equal (string_of_float(Asset.find_sector_dc p2 "F&B" (Date.make_date 5 6 2023))) "7.380004" ~printer: (fun x -> x));
+
+  "testing find_restofsectors_dc" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a2 = Asset.make_asset "PEP.csv" 1.0 177.0 (Date.make_date 1 5 2022) "Tech" in
+    let a3 = Asset.make_asset "NYT.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    let p3 = (Asset.add_asset p2 a2) in
+    let finalp = Asset.add_asset p3 a3 in
+    assert_equal (string_of_float(Asset.find_restofsectors_dc finalp "Tech" (Date.make_date 2 9 2023))) "5.480003" ~printer: (fun x -> x));
+
+  "testing find_restofsectors_dc 1 value" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    assert_equal (string_of_float(Asset.find_restofsectors_dc p2 "F&B" (Date.make_date 5 6 2023))) "0." ~printer: (fun x -> x));
+
+  "testing find_multisector_pc" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a2 = Asset.make_asset "PEP.csv" 1.0 177.0 (Date.make_date 1 5 2022) "Tech" in
+    let a3 = Asset.make_asset "NYT.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    let p3 = (Asset.add_asset p2 a2) in
+    let finalp = Asset.add_asset p3 a3 in
+    assert_equal (string_of_float(Asset.find_multisector_pc finalp ["Tech";"F&B"] (Date.make_date 2 9 2023))) "0.0952952471947" ~printer: (fun x -> x));
+
+  "testing find_multisector_pc 1 value" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    assert_equal (string_of_float(Asset.find_multisector_pc p2 ["F&B"] (Date.make_date 5 6 2023))) "0.0205674261063" ~printer: (fun x -> x));
+
+  "testing find_multisector_dc" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a2 = Asset.make_asset "PEP.csv" 1.0 177.0 (Date.make_date 1 5 2022) "Tech" in
+    let a3 = Asset.make_asset "NYT.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    let p3 = (Asset.add_asset p2 a2) in
+    let finalp = Asset.add_asset p3 a3 in
+    assert_equal (string_of_float(Asset.find_multisector_dc finalp ["Tech";"F&B"] (Date.make_date 2 9 2023))) "9.170005" ~printer: (fun x -> x));
+
+  "testing find_multisector_dc 1 value" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    assert_equal (string_of_float(Asset.find_multisector_dc p2 ["F&B"] (Date.make_date 5 6 2023))) "3.690002" ~printer: (fun x -> x));
+
+  "testing particular_stock_value" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a2 = Asset.make_asset "PEP.csv" 1.0 177.0 (Date.make_date 1 5 2022) "Tech" in
+    let a3 = Asset.make_asset "NYT.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    let p3 = (Asset.add_asset p2 a2) in
+    let finalp = Asset.add_asset p3 a3 in
+    assert_equal (string_of_float(Asset.particular_stock_value finalp "PEP.csv" (Date.make_date 1 5 2023))) "11.070006" ~printer: (fun x -> x));
+
+  "testing particular_stock_value 1 value" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    assert_equal (string_of_float(Asset.particular_stock_value p2 "PEP.csv" (Date.make_date 5 6 2023))) "7.380004" ~printer: (fun x -> x));
+  
+  "testing particular_stock_quantity" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let a2 = Asset.make_asset "PEP.csv" 1.0 177.0 (Date.make_date 1 5 2022) "Tech" in
+    let a3 = Asset.make_asset "NYT.csv" 1.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    let p3 = (Asset.add_asset p2 a2) in
+    let finalp = Asset.add_asset p3 a3 in
+    assert_equal (string_of_float(Asset.particular_stock_quantity finalp "PEP.csv" (Date.make_date 1 5 2023))) "3." ~printer: (fun x -> x));
+
+  "testing particular_stock_quantity 1 value" >:: (fun _ ->
+    let (p1: Asset.portfolio) = [] in
+    let a1 = Asset.make_asset "PEP.csv" 2.0 177.0 (Date.make_date 1 5 2022) "F&B" in
+    let p2 = (Asset.add_asset p1 a1) in
+    assert_equal (string_of_float(Asset.particular_stock_quantity p2 "PEP.csv" (Date.make_date 5 6 2023))) "2." ~printer: (fun x -> x));
+
+
   ]
 let suite =
   "test suite"

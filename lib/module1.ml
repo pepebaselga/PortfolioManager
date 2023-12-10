@@ -117,9 +117,7 @@ let yf_to_stock  (ticker: string) (csv : string list list): stock =
   | h::t -> yf_helper t
   | [] -> yf_helper [] in 
   (ticker, candle)
-let datacreation (csv_name:string) = 
-    let csv_data = Csv.load ("/Users/pepebaselga/cs3110/PortfolioManager/"^csv_name^".csv") in
-    yf_to_stock csv_name csv_data
+
 let rec to_string_helper (candle : (Date.date * Candlestick.cs) list) = 
     match candle with
     | [] -> ""
@@ -129,7 +127,6 @@ let rec to_string (st : stock): string =
   let name,candle = st in
   let p1 = to_string_helper candle in
   name^": "^p1
-
 
 let rec find_date_helper (candle : (Date.date * Candlestick.cs) list) (day1 : Date.date) =
   match candle with

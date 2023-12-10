@@ -1,6 +1,0 @@
-description = ""
-requires = "csv str"
-archive(byte) = "PortfolioManager.cma"
-archive(native) = "PortfolioManager.cmxa"
-plugin(byte) = "PortfolioManager.cma"
-plugin(native) = "PortfolioManager.cmxs"
