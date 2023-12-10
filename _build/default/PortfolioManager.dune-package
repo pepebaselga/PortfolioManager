@@ -1,4 +1,4 @@
-(lang dune 3.12)
+(lang dune 3.10)
 (name PortfolioManager)
 (sections (lib .) (libexec .) (bin ../../bin))
 (files
@@ -11,7 +11,9 @@
    module1.ml
    module2.ml
    module3.ml
+   module3.mli
    module4.ml
+   module4.mli
    opam
    portfolioManager.cmi
    portfolioManager.cmt
@@ -25,9 +27,11 @@
    portfolioManager__Module2.cmx
    portfolioManager__Module3.cmi
    portfolioManager__Module3.cmt
+   portfolioManager__Module3.cmti
    portfolioManager__Module3.cmx
    portfolioManager__Module4.cmi
    portfolioManager__Module4.cmt
+   portfolioManager__Module4.cmti
    portfolioManager__Module4.cmx))
  (libexec (PortfolioManager.cmxs))
  (bin (PortfolioManager)))
@@ -61,9 +65,15 @@
      (module
       (obj_name portfolioManager__Module3)
       (visibility public)
-      (source (path Module3) (impl (path module3.ml))))
+      (source
+       (path Module3)
+       (intf (path module3.mli))
+       (impl (path module3.ml))))
      (module
       (obj_name portfolioManager__Module4)
       (visibility public)
-      (source (path Module4) (impl (path module4.ml))))))
+      (source
+       (path Module4)
+       (intf (path module4.mli))
+       (impl (path module4.ml))))))
    (wrapped true))))

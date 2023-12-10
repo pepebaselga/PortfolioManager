@@ -7,7 +7,9 @@ lib: [
   "_build/install/default/lib/PortfolioManager/module1.ml"
   "_build/install/default/lib/PortfolioManager/module2.ml"
   "_build/install/default/lib/PortfolioManager/module3.ml"
+  "_build/install/default/lib/PortfolioManager/module3.mli"
   "_build/install/default/lib/PortfolioManager/module4.ml"
+  "_build/install/default/lib/PortfolioManager/module4.mli"
   "_build/install/default/lib/PortfolioManager/opam"
   "_build/install/default/lib/PortfolioManager/portfolioManager.cmi"
   "_build/install/default/lib/PortfolioManager/portfolioManager.cmt"
@@ -21,9 +23,11 @@ lib: [
   "_build/install/default/lib/PortfolioManager/portfolioManager__Module2.cmx"
   "_build/install/default/lib/PortfolioManager/portfolioManager__Module3.cmi"
   "_build/install/default/lib/PortfolioManager/portfolioManager__Module3.cmt"
+  "_build/install/default/lib/PortfolioManager/portfolioManager__Module3.cmti"
   "_build/install/default/lib/PortfolioManager/portfolioManager__Module3.cmx"
   "_build/install/default/lib/PortfolioManager/portfolioManager__Module4.cmi"
   "_build/install/default/lib/PortfolioManager/portfolioManager__Module4.cmt"
+  "_build/install/default/lib/PortfolioManager/portfolioManager__Module4.cmti"
   "_build/install/default/lib/PortfolioManager/portfolioManager__Module4.cmx"
 ]
 libexec: [
