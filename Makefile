@@ -11,16 +11,10 @@ test:
 
 run:
 	OCAMLRUNPARAM=b dune exec bin/main.exe
-
-check:
-	@bash check.sh
-
-finalcheck:
-	@bash check.sh final
-
+	
 zip:
 	rm -f PortfolioManager.zip
-	zip -r PortfolioManager.zip . -x@exclude.lst
+	zip -r PortfolioManager.zip . -x@exclude.lst || echo "No files excluded."
 
 clean:
 	dune clean
