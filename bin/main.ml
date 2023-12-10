@@ -94,9 +94,9 @@ let rec eval (current_portfolio : portfolio list) input :
   | [ "#selladvanced?"; pi; asset ] -> sell_three asset current_portfolio pi
   | _ ->
       eval current_portfolio
-        "Incorrect inputs entered. Try again. Look to the instructions for \
-         more clear\n\
-        \   guidance."
+        "Incorrect inputs entered. Try again. Look to the instructions for  more\n\
+        \   clear\n\
+        \  guidance."
 
 and best_portfolio_by_value portfoliolist _ date =
   let date = make_date date in
@@ -105,7 +105,7 @@ and best_portfolio_by_value portfoliolist _ date =
   let string_best = Asset.portfolio_to_string bestportfolio in
   let value_string = string_of_float value in
   let final_string =
-    "Your best portfolio by value for\n   the given date is " ^ string_best
+    "Your best portfolio by value for\n the given\n   date is " ^ string_best
     ^ ", with a value of " ^ value_string
   in
   (portfoliolist, final_string)
@@ -117,7 +117,7 @@ and worst_portfolio_by_value portfoliolist _ date =
   let string_worst = Asset.portfolio_to_string worstportfolio in
   let value_string = string_of_float value in
   let final_string =
-    "Your best portfolio by value for the given date is " ^ string_worst
+    "Your best portfolio by value for\n   the given date is " ^ string_worst
     ^ ", with a value of " ^ value_string
   in
   (portfoliolist, final_string)
@@ -129,7 +129,7 @@ and best_portfolio_percent portfoliolist _ date =
   let string_best = Asset.portfolio_to_string bestportfolio in
   let value_string = string_of_float value in
   let final_string =
-    "Your best portfolio by percent for the given\n   date is " ^ string_best
+    "Your best portfolio by percent for the given\n\n   date is " ^ string_best
     ^ ", with a value of " ^ value_string
   in
   (portfoliolist, final_string)
@@ -141,7 +141,7 @@ and worst_portfolio_percent portfoliolist _ date =
   let string_best = Asset.portfolio_to_string worstportfolio in
   let value_string = string_of_float value in
   let final_string =
-    "Your best portfolio by value for the given date is " ^ string_best
+    "Your best portfolio by value for\n   the given date is " ^ string_best
     ^ ", with a value of " ^ value_string
   in
   (portfoliolist, final_string)
@@ -149,9 +149,9 @@ and worst_portfolio_percent portfoliolist _ date =
 and make_portfolio portfoliolist =
   let pi = List.length (portfoliolist @ [ [] ]) - 1 in
   let added_string_activity =
-    "You created a new\n   empty portfolio, and its reference number is: "
+    "You created a new\n empty portfolio,\n   and its reference number is: "
     ^ string_of_int pi
-    ^ ". Use\n   this value to access this particular portfolio."
+    ^ ". Use\n this value to\n   access this particular portfolio."
   in
   (portfoliolist @ [ [] ], added_string_activity)
 
@@ -179,8 +179,8 @@ and add portfoliolist pi name quantity price date sector =
         final_date sector
     in
     let added_string_activity =
-      "You bought " ^ quantity ^ " shares of " ^ name ^ " for " ^ price
-      ^ " in portfolio " ^ pi ^ "\n   on " ^ Date.to_string final_date ^ "."
+      "You bought " ^ quantity ^ " shares of " ^ name ^ "\n   for " ^ price
+      ^ " in portfolio " ^ pi ^ "\n on " ^ Date.to_string final_date ^ "."
     in
     ( List.map
         (fun x -> if x == current_portfolio then asset :: x else x)
@@ -188,7 +188,7 @@ and add portfoliolist pi name quantity price date sector =
       added_string_activity )
   else
     ( portfoliolist,
-      "Portfolio index is out of range, the max is:\n   "
+      "Portfolio\n   index is out of range, the max is:\n "
       ^ string_of_int (List.length portfoliolist - 1)
       ^ "." )
 
@@ -199,8 +199,10 @@ and sell_remove portfoliolist pi name =
     let removed = Asset.remove_asset current_portfolio name date_bought in
     let final_string =
       "You have just removed " ^ name
-      ^ " from your portfolio. Type #buy to add\n\
-        \   more assets to your portfolio, or #quit to end the simulation."
+      ^ " from your\n\
+        \   portfolio. Type #buy to add\n\
+        \  more assets to your portfolio, or #quit to\n\
+        \   end the simulation."
     in
     ( List.map
         (fun x -> if x == current_portfolio then removed else x)
@@ -208,7 +210,7 @@ and sell_remove portfoliolist pi name =
       final_string )
   else
     ( portfoliolist,
-      "Portfolio index is out of range, the max\n   is: "
+      "Portfolio index is out of range, the max\n is: "
       ^ string_of_int (List.length portfoliolist - 1)
       ^ "." )
 
@@ -218,7 +220,7 @@ and candle portfoliolist _ stockname =
   let candle_string = List.map Candlestick.to_string candle_list in
   let stringed_list = make_string_of_list candle_string in
   let final_string =
-    "The\n   list of candlesticks for stock " ^ stockname ^ " is: "
+    "The\n list of candlesticks for stock " ^ stockname ^ " is: "
     ^ stringed_list
   in
   (portfoliolist, final_string)
@@ -230,7 +232,7 @@ and eods portfoliolist _ stockname =
   let stringed_list = List.map string_of_float eod_list in
   let final_list = make_string_of_list stringed_list in
   let final_string =
-    "The\n   list of the colors for the candlesticks for stock " ^ stockname
+    "The\n list of the colors for the\n   candlesticks for stock " ^ stockname
     ^ " is: " ^ final_list
   in
   (portfoliolist, final_string)
@@ -241,7 +243,7 @@ and colors portfoliolist _ stockname =
   let color_list = List.map get_color_to_string candle_list in
   let stringed_list = make_string_of_list color_list in
   let final_string =
-    "The list of the colors for the candlesticks\n   for stock " ^ stockname
+    "The list of the colors\n   for the candlesticks\n for stock " ^ stockname
     ^ " is: " ^ stringed_list
   in
   (portfoliolist, final_string)
@@ -260,7 +262,7 @@ and percent_report portfoliolist pi date =
   let percent_list = Asset.perasset_percentc current_portfolio final_date in
   let joined_list = List.map consolidate_string_float percent_list in
   let percent_string = make_string_of_list joined_list in
-  let final_string = "Your report by percent\n   change: " ^ percent_string in
+  let final_string = "Your\n   report by percent\n change: " ^ percent_string in
   (portfoliolist, final_string)
 
 and dollar_report portfoliolist pi date =
@@ -269,18 +271,18 @@ and dollar_report portfoliolist pi date =
   let dollar_list = Asset.perasset_dollarc current_portfolio final_date in
   let joined_list = List.map consolidate_string_float dollar_list in
   let dollar_string = make_string_of_list joined_list in
-  let final_string = "Your report by dollar\n   change: " ^ dollar_string in
+  let final_string = "Your\n   report by dollar\n change: " ^ dollar_string in
   (portfoliolist, final_string)
 
 and portfolio portfoliolist pi =
   let current_portfolio = List.nth portfoliolist (int_of_string pi) in
   let print_string =
     if current_portfolio = [] then
-      "Your\n   portfolio is empty. Add some assets with #add to get started!"
+      "Your\n portfolio is empty. Add some assets with #add to get\n   started!"
     else Asset.portfolio_to_string current_portfolio
   in
   ( portfoliolist,
-    print_string ^ "To see your portfolio value, type #portfoliovalue;;" )
+    print_string ^ "To see your portfolio value, type\n   #portfoliovalue;;" )
 
 and portfolio_value portfoliolist pi date =
   let current_portfolio = List.nth portfoliolist (int_of_string pi) in
@@ -298,7 +300,8 @@ and stock portfoliolist _ stockname date =
   let _, candle = Stock.find_date stock final_date in
   let candle_string = Candlestick.to_string candle in
   let final_string =
-    "The\n   stock's candlestick report for the given date is: " ^ candle_string
+    "The\n stock's candlestick report for the given\n   date is: "
+    ^ candle_string
   in
   (portfoliolist, final_string)
 
@@ -315,9 +318,10 @@ and buy_one name portfoliolist pi =
   let buy_strings = List.map Date.to_string buy_list in
   let buy_string = make_string_of_list buy_strings in
   let print_string =
-    "Based on our software, that uses historical data to\n\
-    \   analyze buy triggers, here are the dates you should buy " ^ name ^ ": "
-    ^ buy_string
+    "Based on our software, that uses\n\
+    \   historical data to\n\
+    \  analyze buy triggers, here are the dates you should\n\
+    \   buy " ^ name ^ ": " ^ buy_string
   in
   (portfoliolist, print_string)
 
@@ -334,10 +338,11 @@ and sell_one name portfoliolist pi =
   let sell_strings = List.map Date.to_string sell_list in
   let sell_string = make_string_of_list sell_strings in
   let print_string =
-    "Based on our software, that uses\n\
-    \   historical data to analyze sell triggers, here are the dates you \
-     should sell\n\
-    \   " ^ name ^ ": " ^ sell_string
+    "Based on our\n\
+    \   software, that uses\n\
+    \  historical data to analyze sell triggers, here are\n\
+    \   the dates you  should sell\n\
+    \  " ^ name ^ ": " ^ sell_string
   in
   (portfoliolist, print_string)
 
@@ -354,9 +359,10 @@ and buy_two name portfoliolist pi =
   let buy_strings = List.map Date.to_string buy_list in
   let buy_string = make_string_of_list buy_strings in
   let print_string =
-    "Based on our software, that uses historical data to\n\
-    \   analyze buy triggers, here are the dates you should buy " ^ name ^ ": "
-    ^ buy_string
+    "Based on our software, that uses\n\
+    \   historical data to\n\
+    \  analyze buy triggers, here are the dates you should\n\
+    \   buy " ^ name ^ ": " ^ buy_string
   in
   (portfoliolist, print_string)
 
@@ -373,10 +379,11 @@ and sell_two name portfoliolist pi =
   let sell_strings = List.map Date.to_string sell_list in
   let sell_string = make_string_of_list sell_strings in
   let print_string =
-    "Based on our software, that uses\n\
-    \   historical data to analyze sell triggers, here are the dates you \
-     should sell\n\
-    \   " ^ name ^ ": " ^ sell_string
+    "Based on our\n\
+    \   software, that uses\n\
+    \  historical data to analyze sell triggers, here are\n\
+    \   the dates you  should sell\n\
+    \  " ^ name ^ ": " ^ sell_string
   in
   (portfoliolist, print_string)
 
@@ -393,9 +400,10 @@ and buy_three name portfoliolist pi =
   let buy_strings = List.map Date.to_string buy_list in
   let buy_string = make_string_of_list buy_strings in
   let print_string =
-    "Based on our software, that uses historical data to\n\
-    \   analyze buy triggers, here are the dates you should buy " ^ name ^ ": "
-    ^ buy_string
+    "Based on our software, that uses\n\
+    \   historical data to\n\
+    \  analyze buy triggers, here are the dates you should\n\
+    \   buy " ^ name ^ ": " ^ buy_string
   in
   (portfoliolist, print_string)
 
@@ -412,10 +420,11 @@ and sell_three name portfoliolist pi =
   let sell_strings = List.map Date.to_string sell_list in
   let sell_string = make_string_of_list sell_strings in
   let print_string =
-    "Based on our software, that uses\n\
-    \   historical data to analyze sell triggers, here are the dates you \
-     should sell\n\
-    \   " ^ name ^ ": " ^ sell_string
+    "Based on our\n\
+    \   software, that uses\n\
+    \  historical data to analyze sell triggers, here are\n\
+    \   the dates you  should sell\n\
+    \  " ^ name ^ ": " ^ sell_string
   in
   (portfoliolist, print_string)
 
@@ -424,7 +433,7 @@ and total_percent_change _ date portfoliolist pi =
   let final_date = make_date date in
   let total_change = Asset.total_asset_pc current_portfolio final_date in
   let final_string =
-    "Your total percent change for your portfolio on the given\n   date is "
+    "Your total percent change for your portfolio on the\n   given\n date is "
     ^ string_of_float total_change
   in
   (portfoliolist, final_string)
@@ -434,7 +443,7 @@ and total_dollar_change _ date portfoliolist pi =
   let final_date = make_date date in
   let total_change = Asset.total_dollarc current_portfolio final_date in
   let final_string =
-    "Your total dollar change for your portfolio on the given date\n   is "
+    "Your total dollar change for your portfolio on the given\n   date\n is "
     ^ string_of_float total_change
   in
   (portfoliolist, final_string)
@@ -444,7 +453,7 @@ and total_portfolio_quantity _ _ portfoliolist pi =
   let asset_list = Asset.total_asset_quantity current_portfolio in
   let joined_list = List.map consolidate_string_float asset_list in
   let asset_quantity = make_string_of_list joined_list in
-  let final_string = "Your total asset\n   quantity is " ^ asset_quantity in
+  let final_string = "Your total asset\n\n   quantity is " ^ asset_quantity in
   (portfoliolist, final_string)
 
 and particular_quantity portfoliolist pi name date =
@@ -454,7 +463,7 @@ and particular_quantity portfoliolist pi name date =
     Asset.particular_stock_quantity current_portfolio name final_date
   in
   let print_string =
-    "The value for " ^ name ^ " on " ^ date ^ "\n   is "
+    "The value for " ^ name ^ " on " ^ date ^ "\n is "
     ^ string_of_float stock_val
   in
   (portfoliolist, print_string)
@@ -466,7 +475,7 @@ and particular_value portfoliolist pi name date =
     Asset.particular_stock_value current_portfolio name final_date
   in
   let print_string =
-    "The value for " ^ name ^ " on " ^ date ^ "\n   is "
+    "The value for " ^ name ^ " on " ^ date ^ "\n is "
     ^ string_of_float stock_val
   in
   (portfoliolist, print_string)
@@ -477,7 +486,7 @@ and worst_dollar portfoliolist pi date =
   let name, change = Asset.worst_dollar_asset current_portfolio final_date in
   let print_string =
     "Your worst asset (by dollar change) is " ^ name
-    ^ ". Its\n   dollar change was $" ^ string_of_float change ^ "."
+    ^ ". Its\n\n   dollar change was $" ^ string_of_float change ^ "."
   in
   (portfoliolist, print_string)
 
@@ -487,7 +496,7 @@ and worst_percent portfoliolist pi date =
   let name, change = Asset.worst_percent_asset current_portfolio final_date in
   let print_string =
     "Your worst asset (by percent change) is " ^ name
-    ^ ". Its percent change was " ^ string_of_float change ^ "%."
+    ^ ". Its\n   percent change was " ^ string_of_float change ^ "%."
   in
   (portfoliolist, print_string)
 
@@ -496,8 +505,8 @@ and best_dollar portfoliolist pi date =
   let final_date = make_date date in
   let name, change = Asset.best_dollar_asset current_portfolio final_date in
   let print_string =
-    "Your best asset (by\n   dollar change) is " ^ name
-    ^ ". Its dollar change was $" ^ string_of_float change ^ "."
+    "Your best asset (by\n dollar change) is " ^ name
+    ^ ". Its\n   dollar change was $" ^ string_of_float change ^ "."
   in
   (portfoliolist, print_string)
 
@@ -507,7 +516,7 @@ and best_percent portfoliolist pi date =
   let name, change = Asset.best_percent_asset current_portfolio final_date in
   let print_string =
     "Your best asset (by percent change) is " ^ name
-    ^ ". Its percent change was\n   " ^ string_of_float change ^ "%."
+    ^ ". Its\n   percent change was\n " ^ string_of_float change ^ "%."
   in
   (portfoliolist, print_string)
 
@@ -532,128 +541,159 @@ let rec repl (portfoliolist : portfolio list) : unit =
 let _ =
   print_endline "\nPortfolio Manager: Your Personal Assistant\n";
   print_endline "Welcome.";
-  print_endline "An empty personal portfolio has been created for you.";
+  print_endline "An empty personal portfolio has been\n   created for you.";
   print_endline "We will keep track of your activity!\n";
-  print_endline "Follow\n   the instructions below to interact!";
-  print_endline "Type \"#quit\" to quit\n   interacting";
+  print_endline "Follow\n the instructions below to interact!";
+  print_endline "Type \"#quit\" to quit\n interacting";
   print_endline
-    "Type \"#stock\" portfolio_index\n\
-    \   stock(ABNB/NYT/PEP) date to see information about the given stock";
+    "Type \"#stock\"\n\
+    \   portfolio_index\n\
+    \  stock(ABNB/NYT/PEP) date to see information about the\n\
+    \   given stock";
   print_endline
-    "Type \"#buy portfolio_index stock(ABNB/NYT/PEP)\n\
-    \   quantity(float) price(float) date(mm/dd/yyyy) sector(string)\" to add \
-     a new\n\
-    \   stock to your portfolio.";
+    "Type \"#buy portfolio_index\n\
+    \   stock(ABNB/NYT/PEP)\n\
+    \  quantity(float) price(float) date(mm/dd/yyyy)\n\
+    \   sector(string)\" to add  a new\n\
+    \  stock to your portfolio.";
   print_endline
     "Type \"#sell portfolio_index\n\
-    \   stock_name\" to remove the given stock from your portfolio.";
+    \  stock_name\" to remove the given stock\n\
+    \   from your portfolio.";
   print_endline
-    "Type \"#portfolio portfolio_index\" to see your current portfolio.";
+    "Type \"#portfolio portfolio_index\" to\n   see your current portfolio.";
   print_endline
-    "Type \"#candle portfolio_index stock(ABNB/NYT/PEP)\" to see\n\
-    \   the candlestick data for the given stock";
-  print_endline "Type \"#random\" to\n   see a random asset in your portfolio.";
+    "Type \"#candle portfolio_index\n\
+    \   stock(ABNB/NYT/PEP)\" to see\n\
+    \  the candlestick data for the given stock";
+  print_endline "Type \"#random\" to\n see a random asset in your portfolio.";
   print_endline
     "Type \"#colors\n\
-    \   portfolio_index stock(ABNB/NYT/PEP)\" to see a compiled list of the\n\
-    \   candlestick colors for the given stock";
+    \  portfolio_index stock(ABNB/NYT/PEP)\" to\n\
+    \   see a compiled list of the\n\
+    \  candlestick colors for the given stock";
   print_endline
     "Type \"#eods\n\
-    \   portfolio_index stock(ABNB/NYT/PEP)\" to see a compiled list of the \
-     end of\n\
-    \   day values for the given stock";
+    \  portfolio_index stock(ABNB/NYT/PEP)\" to see\n\
+    \   a compiled list of the  end of\n\
+    \  day values for the given stock";
   print_endline
     "Type \"#sector\n\
-    \   portfolio_index\" to see a compiled list of the sectors in your \
-     portfolio";
-  print_endline
-    "Type \"#percent portfolio_index date\" to see the total\n\
-    \   percent change for your portfolio for the given date";
-  print_endline
-    "Type\n\
-    \   \"#dollar portfolio_index date\" to see the total dollar change for your\n\
-    \   portfolio for the given date";
-  print_endline
-    "Type \"#quantity\n\
-    \   portfolio_index stock(ABNB/NYT/PEP) date(mm/dd/yyyy)\" to see the \
-     particular\n\
-    \   quantity for the given stock name";
-  print_endline
-    "Type \"#bestpercent\n\
-    \   portfolio_index date(mm/dd/yyyy)\" to see the best asset by percent \
-     change in\n\
-    \   your portfolio";
-  print_endline
-    "Type \"#worstpercent portfolio_index\n\
-    \   date(mm/dd/yyyy)\" to see the worst asset by percent change in your\n\
-    \   portfolio";
-  print_endline
-    "Type \"#bestdollar portfolio_index\n\
-    \   date(mm/dd/yyyy)\" to see the best asset by dollar change in your \
-     portfolio";
-  print_endline
-    "Type \"#worstdollar portfolio_index date(mm/dd/yyyy)\" to see\n\
-    \   the worst asset by dollar change in your portfolio";
-  print_endline
-    "Type\n\
-    \   \"#portfoliovalue portfolio_index date\" to see your overall portfolio\n\
-    \   value";
-  print_endline
-    "Type \"#totalquantity portfolio_index\" to see the\n\
-    \   total quantity of the given stock in your portfolio";
-  print_endline
-    "Type\n\
-    \   \"#dollar portfolio_index date(mm/dd/yyyy)\" to see dollar change of the\n\
-    \   given stock on the given date";
+    \  portfolio_index\" to see a compiled list\n\
+    \   of the sectors in your  portfolio";
   print_endline
     "Type \"#percent\n\
-    \   portfolio_index date(mm/dd/yyyy)\" to see percent change of the given \
-     stock\n\
-    \   on the given date";
-  print_endline
-    "Type \"#buysimple? portfolio_index\n\
-    \   stock(ABNB/NYT/PEP)\" to inquire if you should buy the given stock \
-     based on\n\
-    \   beginner analysis";
-  print_endline
-    "Type \"#sellsimple? portfolio_index\n\
-    \   stock(ABNB/NYT/PEP)\" to inquire if you should sell the given stock \
-     based on\n\
-    \   beginner analysis";
-  print_endline
-    "Type \"#buyintermediate? portfolio_index\n\
-    \   stock(ABNB/NYT/PEP)\" to inquire if you should buy the given stock \
-     based on\n\
-    \   intermediate analysis";
-  print_endline
-    "Type \"#sellintermediate?\n\
-    \   portfolio_index stock(ABNB/NYT/PEP)\" to inquire if you should sell \
-     the given\n\
-    \   stock based on intermediate analysis";
-  print_endline
-    "Type \"#buyadvanced?\n\
-    \   portfolio_index stock(ABNB/NYT/PEP)\" to inquire if you should buy the \
-     given\n\
-    \   stock based on advanced analysis";
-  print_endline
-    "Type \"#selladvanced?\n\
-    \   portfolio_index stock(ABNB/NYT/PEP)\" to inquire if you should sell \
-     the given\n\
-    \   stock based on advanced analysis";
-  print_endline
-    "Type \"#bestportfolio\n\
-    \   portfolio_index date\" to see your best portfolio by value from your\n\
-    \   portfolio list";
-  print_endline
-    "Type \"#worstportfolio portfolio_index date\"\n\
-    \   to see your best portfolio by value from your portfolio list";
-  print_endline
-    "Type \"#bestportfoliopercent portfolio_index date\" to see your best\n\
-    \   portfolio by percent change from your portfolio list";
+    \   portfolio_index date\" to see the total\n\
+    \  percent change for your\n\
+    \   portfolio for the given date";
   print_endline
     "Type\n\
-    \   \"#worstportfolio portfolio_index date\" to see your worst portfolio by\n\
-    \   percent change from your portfolio list";
+    \  \"#dollar\n\
+    \   portfolio_index date\" to see the total dollar change for your\n\
+    \  portfolio\n\
+    \   for the given date";
+  print_endline
+    "Type \"#quantity\n\
+    \  portfolio_index\n\
+    \   stock(ABNB/NYT/PEP) date(mm/dd/yyyy)\" to see the  particular\n\
+    \  quantity\n\
+    \   for the given stock name";
+  print_endline
+    "Type \"#bestpercent\n\
+    \ portfolio_index date(mm/dd/yyyy)\" to see the best asset by percent  \
+     change\n\
+    \   in\n\
+    \  your portfolio";
+  print_endline
+    "Type \"#worstpercent\n\
+    \   portfolio_index\n\
+    \  date(mm/dd/yyyy)\" to see the worst asset by percent\n\
+    \   change in your\n\
+    \  portfolio";
+  print_endline
+    "Type \"#bestdollar\n\
+    \   portfolio_index\n\
+    \  date(mm/dd/yyyy)\" to see the best asset by dollar\n\
+    \   change in your  portfolio";
+  print_endline
+    "Type \"#worstdollar\n\
+    \   portfolio_index date(mm/dd/yyyy)\" to see\n\
+    \  the worst asset by dollar\n\
+    \   change in your portfolio";
+  print_endline
+    "Type\n\
+    \  \"#portfoliovalue\n\
+    \   portfolio_index date\" to see your overall portfolio\n\
+    \  value";
+  print_endline
+    "Type \"#totalquantity portfolio_index\" to see the\n\
+    \  total\n\
+    \   quantity of the given stock in your portfolio";
+  print_endline
+    "Type\n\
+    \ \"#dollar portfolio_index date(mm/dd/yyyy)\" to see dollar change of the\n\
+    \ given stock on the given date";
+  print_endline
+    "Type \"#percent\n\
+    \ portfolio_index date(mm/dd/yyyy)\" to see percent change of the given \
+     stock\n\
+    \  on the given date";
+  print_endline
+    "Type \"#buysimple?\n\
+    \   portfolio_index\n\
+    \  stock(ABNB/NYT/PEP)\" to inquire if you should buy the\n\
+    \   given stock  based on\n\
+    \  beginner analysis";
+  print_endline
+    "Type\n\
+    \   \"#sellsimple? portfolio_index\n\
+    \  stock(ABNB/NYT/PEP)\" to inquire if you\n\
+    \   should sell the given stock  based on\n\
+    \  beginner analysis";
+  print_endline
+    "Type \"#buyintermediate? portfolio_index\n\
+    \  stock(ABNB/NYT/PEP)\" to\n\
+    \   inquire if you should buy the given stock  based on\n\
+    \  intermediate\n\
+    \   analysis";
+  print_endline
+    "Type \"#sellintermediate?\n\
+    \  portfolio_index\n\
+    \   stock(ABNB/NYT/PEP)\" to inquire if you should sell  the given\n\
+    \  stock\n\
+    \   based on intermediate analysis";
+  print_endline
+    "Type \"#buyadvanced?\n\
+    \ portfolio_index stock(ABNB/NYT/PEP)\" to inquire if you should buy the \
+     given\n\
+    \  stock based on advanced analysis";
+  print_endline
+    "Type\n\
+    \   \"#selladvanced?\n\
+    \  portfolio_index stock(ABNB/NYT/PEP)\" to inquire if you\n\
+    \   should sell  the given\n\
+    \  stock based on advanced analysis";
+  print_endline
+    "Type \"#bestportfolio\n\
+    \  portfolio_index date\" to see your best portfolio\n\
+    \   by value from your\n\
+    \  portfolio list";
+  print_endline
+    "Type\n\
+    \   \"#worstportfolio portfolio_index date\"\n\
+    \  to see your best portfolio by\n\
+    \   value from your portfolio list";
+  print_endline
+    "Type \"#bestportfoliopercent\n\
+    \   portfolio_index date\" to see your best\n\
+    \  portfolio by percent change from\n\
+    \   your portfolio list";
+  print_endline
+    "Type\n\
+    \  \"#worstportfolio\n\
+    \   portfolio_index date\" to see your worst portfolio by\n\
+    \  percent change\n\
+    \   from your portfolio list";
   repl init_portfolio
 
 let () = print_endline "Thank you. Come again soon, goodbye!"

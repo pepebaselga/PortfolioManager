@@ -47,7 +47,7 @@ let csv2 =
   ]
 
 let csv2str =
-  "12/4/2022: 1.1 | 1.3 | 0.9 | 1.2\n12/5/2022: 1.2 | 1.6 | 1. | 1.3"
+  "12/4/2022: 1.1 | 1.3 | 0.9 | 1.2\n12/5/2022: 1.2 | 1.6 | 1. |\n   1.3"
 
 let csv3 = [ [ "12/4/22"; "1.1"; "1.3"; "0.9"; "1.2" ] ]
 
@@ -59,15 +59,15 @@ let date_tests =
       assert_equal true (Date.check_date vd2) );
     ( "check valid date - 5/31/2023" >:: fun _ ->
       assert_equal false (Date.check_date nvd1) );
-    ( "check invalid date - 2/31/2022" >:: fun _ ->
+    ( "check invalid\n   date - 2/31/2022" >:: fun _ ->
       assert_equal false (Date.check_date nvd2) );
     ( "check valid date - 13/20/2022" >:: fun _ ->
       assert_equal false (Date.check_date nvd3) );
     ( "check valid date - 5/31/2001" >:: fun _ ->
       assert_equal false (Date.check_date nvd4) );
-    ( "check valid date leap- 2/29/2020" >:: fun _ ->
+    ( "check valid date leap-\n   2/29/2020" >:: fun _ ->
       assert_equal true (Date.check_date lvd1) );
-    ( "check valid invalid-date leap- 2/29/2022" >:: fun _ ->
+    ( "check\n   valid invalid-date leap- 2/29/2022" >:: fun _ ->
       assert_equal false (Date.check_date lnv1) );
     ( "compare dates less than" >:: fun _ ->
       assert_equal (Date.date_comp_helper "LT") (Date.compare vd4 vd5) );
@@ -81,29 +81,30 @@ let date_tests =
       assert_equal "11/24/2009" (Date.to_string vd5) ~printer:(fun x -> x) );
     ( "check pp_date - 1/2/2023" >:: fun _ ->
       assert_equal "1/2/2023" (Date.pp_date vd1) );
-    ( "check pp_date - 2/28/2022" >:: fun _ ->
+    ( "check pp_date -\n   2/28/2022" >:: fun _ ->
       assert_equal "2/28/2022" (Date.pp_date vd2) );
     ( "check pp_date- 12/31/2021" >:: fun _ ->
       assert_equal "12/31/2021" (Date.pp_date vd6) );
     ( "check pp_date leap- 2/29/2020" >:: fun _ ->
       assert_equal "2/29/2020" (Date.pp_date lvd1) );
-    ( "check pp_date - invalid-date leap" >:: fun _ ->
+    ( "check pp_date -\n   invalid-date leap" >:: fun _ ->
       assert_raises (Failure "invalid date") (fun () -> Date.pp_date lnv1) );
     ( "check pp_date - invalid-date" >:: fun _ ->
       assert_raises (Failure "invalid date") (fun () -> Date.pp_date nvd1) );
     ( "check pp_date - invalid-date" >:: fun _ ->
-      assert_raises (Failure "invalid date") (fun () -> Date.pp_date nvd2) );
+      assert_raises (Failure "invalid\n   date") (fun () -> Date.pp_date nvd2)
+    );
     ( "check pp_date - invalid-date" >:: fun _ ->
       assert_raises (Failure "invalid date") (fun () -> Date.pp_date nvd3) );
     ( "check pp_date - invalid-date" >:: fun _ ->
       assert_raises (Failure "invalid date") (fun () -> Date.pp_date nvd4) );
-    ( "check pp_date - invalid-date " >:: fun _ ->
+    ( "check pp_date -\n   invalid-date " >:: fun _ ->
       assert_raises (Failure "invalid date") (fun () -> Date.pp_date nvd5) );
     ( "check to_string - 1/2/2023" >:: fun _ ->
       assert_equal "1/2/2023" (Date.to_string vd1) );
     ( "check pp_date - 2/28/2022" >:: fun _ ->
       assert_equal "2/28/2022" (Date.to_string vd2) );
-    ( "check pp_date- 12/31/2021" >:: fun _ ->
+    ( "check\n   pp_date- 12/31/2021" >:: fun _ ->
       assert_equal "12/31/2021" (Date.to_string vd6) );
     ( "check to_string leap- 2/29/2020" >:: fun _ ->
       assert_equal "2/29/2020" (Date.to_string lvd1) );
@@ -111,19 +112,20 @@ let date_tests =
       assert_raises (Failure "invalid date") (fun () -> Date.to_string nvd1) );
     ( "check to_string - invalid-date" >:: fun _ ->
       assert_raises (Failure "invalid date") (fun () -> Date.to_string nvd2) );
-    ( "check to_string - invalid-date" >:: fun _ ->
+    ( "check\n   to_string - invalid-date" >:: fun _ ->
       assert_raises (Failure "invalid date") (fun () -> Date.to_string nvd3) );
     ( "check to_string - invalid-date" >:: fun _ ->
       assert_raises (Failure "invalid date") (fun () -> Date.to_string nvd4) );
     ( "check to_string - invalid-date leap" >:: fun _ ->
       assert_raises (Failure "invalid date") (fun () -> Date.to_string lnv1) );
-    ( "check to_string - invalid-date " >:: fun _ ->
-      assert_raises (Failure "invalid date") (fun () -> Date.to_string nvd5) );
+    ( "check\n   to_string - invalid-date " >:: fun _ ->
+      assert_raises (Failure "invalid\n   date") (fun () -> Date.to_string nvd5)
+    );
     ( "check of_string vd1" >:: fun _ ->
       assert_equal vd1 (Date.of_string "1/2/2023") );
     ( "check of_string vd2" >:: fun _ ->
       assert_equal vd2 (Date.of_string "2/28/2022") );
-    ( "check of_string vd3" >:: fun _ ->
+    ( "check\n   of_string vd3" >:: fun _ ->
       assert_equal vd6 (Date.of_string "12/31/2021") );
   ]
 
@@ -145,7 +147,7 @@ let candle_tests =
       assert_equal grey_cs (Candlestick.get_color cs3) );
     ( "candlestick color (loss)" >:: fun _ ->
       assert_equal red_cs (Candlestick.get_color cs2) );
-    ( "candlestick color (profit)" >:: fun _ ->
+    ( "candlestick color\n   (profit)" >:: fun _ ->
       assert_equal green_cs (Candlestick.get_color cs1) );
   ]
 
@@ -261,8 +263,10 @@ let portfolio_tests =
       in
       let test_portfolio = [ test_asset ] in
       let expected_string =
-        "[Name: Test Asset, Quantity: 150.00, Purchase Price: 75.00, Date \
-         Purchased: 1/1/2023, Sector: Finance]"
+        "[Name: Test\n\
+        \   Asset, Quantity: 150.00, Purchase Price: 75.00, Date  Purchased: \
+         1/1/2023,\n\
+        \   Sector: Finance]"
       in
       assert_equal expected_string (Asset.portfolio_to_string test_portfolio)
         ~printer:(fun x -> x) );
@@ -276,10 +280,10 @@ let portfolio_tests =
       in
       let test_portfolio = [ asset1; asset2 ] in
       let expected_string =
-        "[Name: Asset One, Quantity: 100.00, Purchase Price: 50.00, Date \
-         Purchased: 1/1/2023, Sector: Tech], [Name: Asset Two, Quantity: \
-         200.00, Purchase Price: 100.00, Date Purchased: 2/1/2023, Sector: \
-         Health]"
+        "[Name: Asset One, Quantity: 100.00, Purchase Price: 50.00,\n\
+        \   Date  Purchased: 1/1/2023, Sector: Tech], [Name: Asset Two, \
+         Quantity: 200.00, Purchase Price: 100.00, Date Purchased: 2/1/2023, \
+         Sector:  Health]"
       in
       assert_equal expected_string (Asset.portfolio_to_string test_portfolio)
         ~printer:(fun x -> x);
@@ -377,7 +381,7 @@ let portfolio_tests =
            (Asset.total_portfolio_value finalp (Date.make_date 12 4 2023)))
         "555.089995"
         ~printer:(fun x -> x) );
-    ( "testing total_portfolio_value 1 value" >:: fun _ ->
+    ( "testing\n   total_portfolio_value 1 value" >:: fun _ ->
       let (p1 : Asset.portfolio) = [] in
       let a1 =
         Asset.make_asset "PEP" 2.0 177.0 (Date.make_date 6 9 2023) "F&B"
@@ -407,7 +411,7 @@ let portfolio_tests =
            (Asset.total_dollarc finalp (Date.make_date 12 8 2023)))
         "-39.520007"
         ~printer:(fun x -> x) );
-    ( "testing total_dollarc 1 value" >:: fun _ ->
+    ( "testing total_dollarc 1\n   value" >:: fun _ ->
       let (p1 : Asset.portfolio) = [] in
       let a1 =
         Asset.make_asset "PEP" 2.0 177.0 (Date.make_date 4 18 2023) "F&B"
@@ -482,7 +486,7 @@ let portfolio_tests =
               (Asset.perasset_dollarc p2 (Date.make_date 9 5 2023))))
         "-12.179992"
         ~printer:(fun x -> x) );
-    ( "testing perasset_percentc multiple values" >:: fun _ ->
+    ( "testing perasset_percentc multiple\n   values" >:: fun _ ->
       let (p1 : Asset.portfolio) = [] in
       let a1 =
         Asset.make_asset "PEP" 2.0 177.0 (Date.make_date 9 5 2023) "F&B"
@@ -540,7 +544,7 @@ let portfolio_tests =
               (Asset.perasset_percentc finalp (Date.make_date 9 19 2023))))
         "0.0985662739527"
         ~printer:(fun x -> x) );
-    ( "testing perasset_dollarc 1 value" >:: fun _ ->
+    ( "testing perasset_dollarc 1\n   value" >:: fun _ ->
       let (p1 : Asset.portfolio) = [] in
       let a1 =
         Asset.make_asset "PEP" 2.0 177.0 (Date.make_date 9 18 2023) "F&B"
@@ -606,7 +610,7 @@ let portfolio_tests =
       let finalp = Asset.add_asset p3 a3 in
       assert_equal
         (List.fold_left
-           (fun sum (first, second) -> sum ^ first ^ ": " ^ second ^ "; ")
+           (fun sum (first, second) -> sum ^ first ^ ": " ^ second ^ ";\n   ")
            ""
            (Asset.find_list_sectors finalp))
         "PEP: F&B; PEP: F&B; NYT: F&B; "
@@ -643,7 +647,7 @@ let portfolio_tests =
            (Asset.find_sector_pc finalp "Tech" (Date.make_date 2 9 2023)))
         "-0.0365248587908"
         ~printer:(fun x -> x) );
-    ( "testing find_sector_pc 1 value" >:: fun _ ->
+    ( "testing find_sector_pc 1\n   value" >:: fun _ ->
       let (p1 : Asset.portfolio) = [] in
       let a1 =
         Asset.make_asset "PEP" 2.0 177.0 (Date.make_date 4 14 2023) "F&B"
@@ -684,7 +688,7 @@ let portfolio_tests =
            (Asset.find_restofsectors_pc p2 "F&B" (Date.make_date 5 6 2023)))
         "0."
         ~printer:(fun x -> x) );
-    ( "testing find_sectors_dc" >:: fun _ ->
+    ( "testing\n   find_sectors_dc" >:: fun _ ->
       let (p1 : Asset.portfolio) = [] in
       let a1 =
         Asset.make_asset "PEP" 2.0 177.0 (Date.make_date 9 15 2023) "F&B"
@@ -714,7 +718,7 @@ let portfolio_tests =
            (Asset.find_sector_dc p2 "F&B" (Date.make_date 3 29 2023)))
         "2.48001"
         ~printer:(fun x -> x) );
-    ( "testing find_restofsectors_dc" >:: fun _ ->
+    ( "testing\n   find_restofsectors_dc" >:: fun _ ->
       let (p1 : Asset.portfolio) = [] in
       let a1 =
         Asset.make_asset "PEP" 2.0 177.0 (Date.make_date 3 1 2023) "F&B"
@@ -744,7 +748,7 @@ let portfolio_tests =
            (Asset.find_restofsectors_dc p2 "F&B" (Date.make_date 5 6 2023)))
         "0."
         ~printer:(fun x -> x) );
-    ( "testing find_multisector_pc" >:: fun _ ->
+    ( "testing\n   find_multisector_pc" >:: fun _ ->
       let (p1 : Asset.portfolio) = [] in
       let a1 =
         Asset.make_asset "PEP" 2.0 177.0 (Date.make_date 1 4 2023) "F&B"
@@ -764,7 +768,7 @@ let portfolio_tests =
               (Date.make_date 5 11 2023)))
         "0.137069022596"
         ~printer:(fun x -> x) );
-    ( "testing find_multisector_pc 1 value" >:: fun _ ->
+    ( "testing\n   find_multisector_pc 1 value" >:: fun _ ->
       let (p1 : Asset.portfolio) = [] in
       let a1 =
         Asset.make_asset "PEP" 2.0 177.0 (Date.make_date 1 9 2023) "F&B"
@@ -825,7 +829,7 @@ let portfolio_tests =
            (Asset.particular_stock_value finalp "PEP" (Date.make_date 12 5 2023)))
         "503.820006"
         ~printer:(fun x -> x) );
-    ( "testing particular_stock_value 1 value" >:: fun _ ->
+    ( "testing\n   particular_stock_value 1 value" >:: fun _ ->
       let (p1 : Asset.portfolio) = [] in
       let a1 =
         Asset.make_asset "PEP" 2.0 177.0 (Date.make_date 1 8 2023) "F&B"
@@ -875,7 +879,7 @@ let portfolio_tests =
         ("(" ^ string_of_int id ^ "," ^ string_of_float value ^ ")")
         "(2,220.640003)"
         ~printer:(fun x -> x) );
-    ( "testing particular_stock_quantity 1 value" >:: fun _ ->
+    ( "testing\n   particular_stock_quantity 1 value" >:: fun _ ->
       let (p1 : Asset.portfolio) = [] in
       let a1 =
         Asset.make_asset "PEP" 2.0 177.0 (Date.make_date 12 5 2023) "F&B"
@@ -886,7 +890,7 @@ let portfolio_tests =
            (Asset.particular_stock_quantity p2 "PEP" (Date.make_date 5 6 2023)))
         "2."
         ~printer:(fun x -> x) );
-    ( "testing particular_stock_quantity in different orders" >:: fun _ ->
+    ( "testing particular_stock_quantity in different\n   orders" >:: fun _ ->
       let (p1 : Asset.portfolio) = [] in
       let a1 =
         Asset.make_asset "PEP" 2.0 177.0 (Date.make_date 6 5 2023) "F&B"
@@ -914,7 +918,7 @@ let portfolio_tests =
               (Date.make_date 1 5 2023)))
         "13."
         ~printer:(fun x -> x) );
-    ( "testing find_multisector_pc multiple sectors" >:: fun _ ->
+    ( "testing find_multisector_pc multiple\n   sectors" >:: fun _ ->
       let (p1 : Asset.portfolio) = [] in
       let a1 =
         Asset.make_asset "PEP" 2.0 177.0 (Date.make_date 1 4 2023) "F&B"
@@ -986,7 +990,7 @@ let buysell_tests =
       assert_equal (BuySell.make_res Buy pd3 "Hammer")
         (BuySell.find_single_patterns hammer) ~printer:(fun x ->
           BuySell.res_to_string x) );
-    ( "testing reverse hammer pattern" >:: fun _ ->
+    ( "testing reverse hammer\n   pattern" >:: fun _ ->
       assert_equal (BuySell.make_res Buy pd3 "RevHammer")
         (BuySell.find_single_patterns rev_hammer) ~printer:(fun x ->
           BuySell.res_to_string x) );
@@ -994,15 +998,15 @@ let buysell_tests =
       assert_equal (BuySell.make_res Sell pd3 "Doji")
         (BuySell.find_single_patterns doji) ~printer:(fun x ->
           BuySell.res_to_string x) );
-    ( "testing marubozu pattern (bullish)" >:: fun _ ->
+    ( "testing marubozu\n   pattern (bullish)" >:: fun _ ->
       assert_equal (BuySell.make_res Buy pd3 "Marubozu(Bullish)")
         (BuySell.find_single_patterns marubozu_bull) ~printer:(fun x ->
           BuySell.res_to_string x) );
-    ( "testing marubozu pattern (bearish)" >:: fun _ ->
+    ( "testing marubozu pattern\n   (bearish)" >:: fun _ ->
       assert_equal (BuySell.make_res Sell pd3 "Marubozu(Bearish)")
         (BuySell.find_single_patterns marubozu_bear) ~printer:(fun x ->
           BuySell.res_to_string x) );
-    ( "testing marubozu pattern (neutral)" >:: fun _ ->
+    ( "testing marubozu pattern\n   (neutral)" >:: fun _ ->
       assert_equal (BuySell.make_res Neut pd3 "NoPattern")
         (BuySell.find_single_patterns marubozu_neut) ~printer:(fun x ->
           BuySell.res_to_string x) );
@@ -1010,7 +1014,7 @@ let buysell_tests =
       assert_equal (BuySell.make_res Neut pd3 "NoPattern")
         (BuySell.find_single_patterns no_pattern) ~printer:(fun x ->
           BuySell.res_to_string x) );
-    ( "testing bullish engulfing" >:: fun _ ->
+    ( "testing bullish\n   engulfing" >:: fun _ ->
       assert_equal (BuySell.make_res Buy pd3 "Engulfing(Bullish)")
         (BuySell.find_duo_patterns engulfing_bull) ~printer:(fun x ->
           BuySell.res_to_string x) );
