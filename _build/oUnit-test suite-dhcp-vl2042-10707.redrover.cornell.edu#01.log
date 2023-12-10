@@ -1,0 +1,131 @@
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:0:check valid date - 1/30/2022.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:0:check valid date - 1/30/2022 is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:0:check valid date - 1/30/2022.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:2:check valid date - 5/31/2023.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:2:check valid date - 5/31/2023 is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:2:check valid date - 5/31/2023.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:4:check valid date - 13/20/2022.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:4:check valid date - 13/20/2022 is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:4:check valid date - 13/20/2022.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:6:check valid date leap- 2/29/2020.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:6:check valid date leap- 2/29/2020 is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:6:check valid date leap- 2/29/2020.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:8:compare dates less than.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:8:compare dates less than is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:8:compare dates less than.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:10:compare dates equal.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:10:compare dates equal is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:10:compare dates equal.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:12:check pp_date - 1/2/2023.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:12:check pp_date - 1/2/2023 is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:12:check pp_date - 1/2/2023.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:14:check pp_date- 12/31/2021.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:14:check pp_date- 12/31/2021 is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:14:check pp_date- 12/31/2021.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:16:check pp_date - invalid-date leap.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:16:check pp_date - invalid-date leap is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:16:check pp_date - invalid-date leap.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:18:check pp_date - invalid-date.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:18:check pp_date - invalid-date is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:18:check pp_date - invalid-date.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:20:check pp_date - invalid-date.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:20:check pp_date - invalid-date is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:20:check pp_date - invalid-date.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:22:check to_string - 1/2/2023.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:22:check to_string - 1/2/2023 is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:22:check to_string - 1/2/2023.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:24:check pp_date- 12/31/2021.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:24:check pp_date- 12/31/2021 is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:24:check pp_date- 12/31/2021.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:26:check to_string - invalid-date.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:26:check to_string - invalid-date is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:26:check to_string - invalid-date.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:28:check to_string - invalid-date.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:28:check to_string - invalid-date is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:28:check to_string - invalid-date.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:30:check to_string - invalid-date leap.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:30:check to_string - invalid-date leap is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:30:check to_string - invalid-date leap.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:32:check of_string vd1.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:32:check of_string vd1 is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:32:check of_string vd1.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:35:candlestick to_string.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:35:candlestick to_string is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:35:candlestick to_string.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:37:candlestick eod change (loss).
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:37:candlestick eod change (loss) is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:37:candlestick eod change (loss).
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:39:candlestick color (even).
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:39:candlestick color (even) is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:39:candlestick color (even).
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:41:candlestick color (profit).
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:41:candlestick color (profit) is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:41:candlestick color (profit).
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:43:csv to stock/to_string.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:43:csv to stock/to_string is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:43:csv to stock/to_string.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:45:add_asset.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:45:add_asset is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:45:add_asset.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:47:portfolio_to_string_single_asset.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:47:portfolio_to_string_single_asset is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:47:portfolio_to_string_single_asset.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:49:testing total_portfolio_value multiple values.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:49:testing total_portfolio_value multiple values is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:49:testing total_portfolio_value multiple values.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:51:testing total_dollarc multiple values.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:51:testing total_dollarc multiple values is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:51:testing total_dollarc multiple values.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:53:testing total_asset_pc multiple values.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:53:testing total_asset_pc multiple values is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:53:testing total_asset_pc multiple values.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:55:testing perasset_dollarc multiple values.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:55:testing perasset_dollarc multiple values is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:55:testing perasset_dollarc multiple values.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:57:testing perasset_percentc multiple values.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:57:testing perasset_percentc multiple values is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:57:testing perasset_percentc multiple values.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:59:testing perasset_percentc multiple values.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:59:testing perasset_percentc multiple values is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:59:testing perasset_percentc multiple values.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:61:testing total_asset_quantity multiple values.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:61:testing total_asset_quantity multiple values is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:61:testing total_asset_quantity multiple values.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:63:testing find_list_sectors multiple values.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:63:testing find_list_sectors multiple values is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:63:testing find_list_sectors multiple values.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:65:testing find_sector_pc.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:65:testing find_sector_pc is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:65:testing find_sector_pc.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:67:testing find_restofsectors_pc.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:67:testing find_restofsectors_pc is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:67:testing find_restofsectors_pc.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:68:testing find_restofsectors_pc 1 value.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:68:testing find_restofsectors_pc 1 value is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:68:testing find_restofsectors_pc 1 value.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:71:testing find_restofsectors_dc.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:71:testing find_restofsectors_dc is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:71:testing find_restofsectors_dc.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:73:testing find_multisector_pc.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:73:testing find_multisector_pc is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:73:testing find_multisector_pc.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:75:testing find_multisector_dc.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:75:testing find_multisector_dc is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:75:testing find_multisector_dc.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:77:testing particular_stock_value.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 E: Test test suite:77:testing particular_stock_value has failed.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 E: expected: 549.300018 but got: 11.070006 in test test suite:77:testing particular_stock_value.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 E: Raised at OUnitAssert.assert_failure in file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 E: 
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:77:testing particular_stock_value.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:78:testing particular_stock_value 1 value.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 E: Test test suite:78:testing particular_stock_value 1 value has failed.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 E: expected: 366.200012 but got: 7.380004 in test test suite:78:testing particular_stock_value 1 value.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 E: Raised at OUnitAssert.assert_failure in file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 E: 
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:78:testing particular_stock_value 1 value.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Start test test suite:80:testing particular_stock_quantity 1 value.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: Test test suite:80:testing particular_stock_quantity 1 value is successful.
+2023-12-10T06:14:26+00:00 dhcp-vl2042-10707.redrover.cornell.edu#01 I: End test test suite:80:testing particular_stock_quantity 1 value.
