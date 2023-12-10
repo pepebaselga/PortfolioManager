@@ -953,10 +953,16 @@ let engulfing_bull_cs1 : Candlestick.cs =
   Candlestick.make_cs 93.6 94.5 89.0 90.3
 
 let engulfing_bull_cs2 : Candlestick.cs =
+  Candlestick.make_cs 89.2 94.5 89.0 94.2
+
+let engulfing_bear_cs2 : Candlestick.cs =
+  Candlestick.make_cs 94.4 94.5 89.0 88.3
+
+let engulfing_bear_cs1 : Candlestick.cs =
   Candlestick.make_cs 89.2 94.5 89.0 93.8
 
-let tweezertop_cs1 : Candlestick.cs = Candlestick.make_cs 50.6 57.1 50.0 55.1
-let tweezertop_cs2 : Candlestick.cs = Candlestick.make_cs 50.6 57.0 50.0 55.1
+let tweezertop_cs1 : Candlestick.cs = Candlestick.make_cs 41.6 77.1 50.0 55.1
+let tweezertop_cs2 : Candlestick.cs = Candlestick.make_cs 55.6 77.0 50.0 35.1
 let hammer : Stock.stock = ("Hammer", [ (pd3, hammer_cs) ])
 let rev_hammer : Stock.stock = ("RevHammer", [ (pd3, rhammer_cs) ])
 let doji : Stock.stock = ("Doji", [ (pd3, doji_cs) ])
@@ -965,8 +971,14 @@ let marubozu_bear : Stock.stock = ("Marubozu", [ (pd3, marubozu_bear_cs) ])
 let marubozu_neut : Stock.stock = ("Marubozu", [ (pd3, marubozu_neut_cs) ])
 let no_pattern : Stock.stock = ("NoPattern", [ (pd3, cs2) ])
 
+let tweezertop : Stock.stock =
+  ("TweezerTop", [ (pd2, tweezertop_cs1); (pd3, tweezertop_cs2) ])
+
 let engulfing_bull : Stock.stock =
   ("EngulfingBull", [ (pd2, engulfing_bull_cs1); (pd3, engulfing_bull_cs2) ])
+
+let engulfing_bear : Stock.stock =
+  ("EngulfingBull", [ (pd2, engulfing_bear_cs1); (pd3, engulfing_bear_cs2) ])
 
 let buysell_tests =
   [
@@ -998,14 +1010,21 @@ let buysell_tests =
       assert_equal (BuySell.make_res Neut pd3 "NoPattern")
         (BuySell.find_single_patterns no_pattern) ~printer:(fun x ->
           BuySell.res_to_string x) );
-    ( "testing bullish engulfingg" >:: fun _ ->
+    ( "testing bullish engulfing" >:: fun _ ->
       assert_equal (BuySell.make_res Buy pd3 "Engulfing(Bullish)")
         (BuySell.find_duo_patterns engulfing_bull) ~printer:(fun x ->
+          BuySell.res_to_string x) );
+    ( "testing bearish engulfing" >:: fun _ ->
+      assert_equal (BuySell.make_res Sell pd3 "Engulfing(Bearish)")
+        (BuySell.find_duo_patterns engulfing_bear) ~printer:(fun x ->
           BuySell.res_to_string x) );
   ]
 
 let suite =
   "test suite"
-  >::: List.flatten [ date_tests; candle_tests; stock_tests; portfolio_tests ]
+  >::: List.flatten
+         [
+           date_tests; candle_tests; stock_tests; portfolio_tests; buysell_tests;
+         ]
 
 let () = run_test_tt_main suite

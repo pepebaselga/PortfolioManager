@@ -67,15 +67,17 @@ module BuySell = struct
     let f_col = Candlestick.get_color fc in
     let s_col = Candlestick.get_color sc in
     if f_col = Red && s_col = Green then
-      let first_top, first_bot = (fc.openp, fc.closep) in
-      let second_top, second_bot = (fc.closep, fc.openp) in
+      let first_top = fc.openp in
+      let first_bot = fc.closep in
+      let second_top = fc.closep in
+      let second_bot = fc.openp in
       let crit = first_top > second_top && first_bot < second_bot in
       if crit then (EngulfingBull, date1) else (NoPattern, date1)
     else if f_col = Green && s_col = Red then
       let first_top, first_bot = (fc.closep, fc.openp) in
       let second_top, second_bot = (fc.openp, fc.closep) in
-      let crit2 = first_top > second_top && first_bot < second_bot in
-      if crit2 then (EngulfingBear, date1) else (NoPattern, date1)
+      let crit = first_top > second_top && first_bot < second_bot in
+      if crit then (EngulfingBear, date1) else (NoPattern, date1)
     else (NoPattern, date1)
 
   let check_tweezer_top
@@ -143,7 +145,7 @@ module BuySell = struct
       (s : Date.date * Candlestick.cs) =
     let res, date = check_engulfing f s in
     if res = EngulfingBull then (Buy, date, "Engulfing(Bullish)")
-    else if res = EngulfingBear then (Sell, date, "Engulfing(Bear)")
+    else if res = EngulfingBear then (Sell, date, "Engulfing(Bearish)")
     else (Neut, date, "NoPattern")
 
   let rec find_duo_patterns (stock : Stock.stock) =
