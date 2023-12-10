@@ -109,7 +109,7 @@ module Asset = struct
     let min = ref ((List.nth portfolio 0).name, (Stock.get_percent_diff first ) first_bought day) in 
     List.iter (fun x -> 
       let stock =  find_asset (x.name^".csv") in 
-      let dollar_dif = Stock.get_dollar_diff stock x.date_purchased day in
+      let dollar_dif = Stock.get_percent_diff stock x.date_purchased day in
       let name,pv = !min in
       (if dollar_dif < pv then (min := (name,pv)) else ())
       ) portfolio;!min
@@ -218,5 +218,49 @@ module Asset = struct
     List.iter (fun x -> if x.name = asset_name then 
     count:= !count +. x.quantity ) portfolio;
     !count
+
+  let best_portfolio_value (plist: portfolio list) (day:date) = 
+    let first = total_portfolio_value (List.nth plist 0) day in
+    let max = ref (0,first) in 
+    let counter = ref 0 in
+    List.iter (fun x ->
+      counter := (!counter + 1);
+      let name,dv = !max in
+      let nv = (total_portfolio_value x day) in
+      (if (nv > dv) then max := (!counter,dv) else ()) 
+      ) plist;!max
+
+  let worst_portfolio_value (plist: portfolio list) (day:date) = 
+    let first = total_portfolio_value (List.nth plist 0) day in
+    let min = ref (0,first) in 
+    let counter = ref 0 in
+    List.iter (fun x ->
+      counter := (!counter + 1);
+      let name,dv = !min in
+      let nv = (total_portfolio_value x day) in
+      (if (nv < dv) then min := (!counter,dv) else ()) 
+      ) plist;!min
+  
+  let best_portfolio_pc (plist: portfolio list) (day:date) = 
+    let first = total_asset_pc (List.nth plist 0) day in
+    let max = ref (0,first) in 
+    let counter = ref 0 in
+    List.iter (fun x ->
+      counter := (!counter + 1);
+      let name,dv = !max in
+      let nv = (total_asset_pc x day) in
+      (if (nv > dv) then max := (!counter,dv) else ()) 
+      ) plist;!max
+  
+  let worst_portfolio_pc (plist: portfolio list) (day:date) = 
+    let first = total_asset_pc (List.nth plist 0) day in
+    let min = ref (0,first) in 
+    let counter = ref 0 in
+    List.iter (fun x ->
+      counter := (!counter + 1);
+      let name,dv = !min in
+      let nv = (total_asset_pc x day) in
+      (if (nv < dv) then min := (!counter,dv) else ()) 
+      ) plist;!min
 
 end

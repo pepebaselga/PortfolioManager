@@ -18,25 +18,25 @@ module Date = struct
       | i -> if (i mod 2 = 1) then long d.day else short d.day in
     match d.year with
     |x -> if (x < 2000)||(x > 2023) then false else check_helper d
-  let make_date month day year =
+    let make_date month day year =
       { month = month; day = day; year = year }
       let ( <=^ ) (day1 : date) (day2: date) : bool =
       match day1.year <= day2.year with
       | false -> false
-      | true -> 
+      | true -> if day1.year < day2.year then true else
         match day1.month <= day2.month with
         | false -> false
-        | true -> 
+        | true -> if day1.month < day2.month then true else
           match day1.day <= day2.day with
           | false -> false
           | true -> true
     let ( >=^ ) (day1 : date) (day2: date) : bool =
       match day1.year >= day2.year with
       | false -> false
-      | true -> 
+      | true -> if day1.year > day2.year then true else
         match day1.month >= day2.month with
         | false -> false
-        | true -> 
+        | true -> if day1.month > day2.month then true else
           match day1.day >= day2.day with
           | false -> false
           | true -> true
