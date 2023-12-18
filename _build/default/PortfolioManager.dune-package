@@ -1,6 +1,10 @@
-(lang dune 3.10)
+(lang dune 3.12)
 (name PortfolioManager)
-(sections (lib .) (libexec .) (bin ../../bin))
+(sections
+ (lib .)
+ (libexec .)
+ (bin ../../bin)
+ (doc ../../doc/PortfolioManager))
 (files
  (lib
   (META
@@ -34,7 +38,8 @@
    portfolioManager__Module4.cmti
    portfolioManager__Module4.cmx))
  (libexec (PortfolioManager.cmxs))
- (bin (PortfolioManager)))
+ (bin (PortfolioManager))
+ (doc (README.md)))
 (library
  (name PortfolioManager)
  (kind normal)

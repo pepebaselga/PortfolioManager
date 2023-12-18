@@ -36,3 +36,6 @@ libexec: [
 bin: [
   "_build/install/default/bin/PortfolioManager"
 ]
+doc: [
+  "_build/install/default/doc/PortfolioManager/README.md"
+]
